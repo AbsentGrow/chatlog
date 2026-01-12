@@ -1,0 +1,25 @@
+services:
+  db:
+    image: "${DOCKER_REGISTRY:-docker.io}/postgres:16"
+    restart: always
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: chatlog
+      POSTGRES_USER: chatlog_user
+      POSTGRES_PASSWORD: chatlog_password
+    ports:
+      - "5432:5432"
+    profiles:
+      - minimal
+      - enterprise
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d chatlog -U chatlog_user"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres:
+    name: postgres-data
