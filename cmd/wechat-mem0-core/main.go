@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -12,8 +11,6 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/sjzar/chatlog/internal/chatlog"
 	"github.com/sjzar/chatlog/internal/wechatdb"
-
-	"database/sql"
 
 	_ "github.com/joho/godotenv/autoload"
 )
@@ -186,64 +183,58 @@ func main() {
 		log.Fatal().Err(err).Msg("failed to create db")
 		return
 	}
-	contacts, err := db.GetContacts("", 0, 0)
-	if err != nil {
-		log.Fatal().Err(err).Msg("failed to get contacts")
-		return
-	}
 
-	ds := os.Getenv("DATA_SOURCE")
-	pgDB, err := sql.Open("pgx", ds)
-	if err != nil {
-		log.Fatal().Err(err).Msg("failed to connect to postgres")
-		return
-	}
-	defer pgDB.Close()
-
-	ctx := context.Background()
-
-	//_, err = pgDB.ExecContext(ctx, `
-	//	CREATE TABLE IF NOT EXISTS contact (
-	//		id SERIAL PRIMARY KEY,
-	//		user_name VARCHAR(255) NOT NULL UNIQUE,
-	//		alias VARCHAR(255),
-	//		remark VARCHAR(255),
-	//		nick_name VARCHAR(255),
-	//		is_friend BOOLEAN DEFAULT FALSE,
-	//		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	//		updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-	//	)
-	//`)
-	//if err != nil {
-	//	log.Fatal().Err(err).Msg("failed to create table")
-	//	return
-	//}
-
-	stmt, err := pgDB.PrepareContext(ctx, `
-		INSERT INTO contact (user_name, alias, remark, nick_name, is_friend)
-		VALUES ($1, $2, $3, $4, $5)
-	`)
-	if err != nil {
-		log.Fatal().Err(err).Msg("failed to prepare statement")
-		return
-	}
-	defer stmt.Close()
-
-	successCount := 0
-	failCount := 0
-	for _, contact := range contacts.Items {
-		log.Info().Interface("contact", contact).Msg("contact")
-		_, err := stmt.ExecContext(ctx, contact.UserName, contact.Alias, contact.Remark, contact.NickName, contact.IsFriend)
+	/*
+		contacts, err := db.GetContacts("", 0, 0)
 		if err != nil {
-			log.Error().Err(err).Str("user_name", contact.UserName).Msg("failed to insert contact")
-			failCount++
-			continue
+			log.Fatal().Err(err).Msg("failed to get contacts")
+			return
 		}
-		successCount++
+
+		ds := os.Getenv("DATA_SOURCE")
+		pgDB, err := sql.Open("pgx", ds)
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to connect to postgres")
+			return
+		}
+		defer pgDB.Close()
+
+		ctx := context.Background()
+
+		stmt, err := pgDB.PrepareContext(ctx, `
+			INSERT INTO contact (user_name, alias, remark, nick_name, is_friend)
+			VALUES ($1, $2, $3, $4, $5)
+		`)
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to prepare statement")
+			return
+		}
+		defer stmt.Close()
+
+		successCount := 0
+		failCount := 0
+		for _, contact := range contacts.Items {
+			log.Info().Interface("contact", contact).Msg("contact")
+			_, err := stmt.ExecContext(ctx, contact.UserName, contact.Alias, contact.Remark, contact.NickName, contact.IsFriend)
+			if err != nil {
+				log.Error().Err(err).Str("user_name", contact.UserName).Msg("failed to insert contact")
+				failCount++
+				continue
+			}
+			successCount++
+		}
+
+		log.Info().Ints("count", []int{successCount, failCount}).Msg("contacts saved to postgres")
+	*/
+
+	rooms, err := db.GetChatRooms("", 0, 0)
+	if err != nil {
+		log.Fatal().Err(err).Msg("failed to get rooms")
+		return
 	}
-
-	log.Info().Ints("count", []int{successCount, failCount}).Msg("contacts saved to postgres")
-
+	for _, room := range rooms.Items {
+		log.Info().Interface("room", room).Msg("room")
+	}
 	/*
 		// db migration
 		dbFiles, err := pgmigrate.ListDBFiles(os.Getenv("DB_PATH"))
