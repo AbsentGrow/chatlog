@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>IK Analyzer 扩展配置</comment>
+    
+    <!-- 本地扩展词典（可选，本例未使用）
+    <entry key="ext_dict">custom/mydict.dic</entry>
+    -->
+
+    <!-- 本地扩展停用词词典（可选，本例未使用）
+    <entry key="ext_stopwords">custom/mystopwords.dic</entry>
+    -->
+
+    <!-- 远程扩展词典（用于热更新） -->
+    <!-- 
+        URL 必须是容器内可访问的地址。
+        在 Docker Compose 网络中，'dict-server' 是服务名，8000 是端口。
+        IK 默认每 60 秒检查一次 Last-Modified/ETag 头以判断是否需要更新。
+    -->
+    <entry key="remote_ext_dict">http://dict-server:8000/custom_dict.txt</entry>
+    
+    <!-- 可配置多个远程词典，每行一个
+    <entry key="remote_ext_dict">http://dict-server:8000/another_dict.txt</entry>
+    -->
+
+</properties>
