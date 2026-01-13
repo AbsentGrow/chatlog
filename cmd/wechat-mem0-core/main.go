@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"database/sql"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -29,6 +31,13 @@ func initLog(debug bool, miscDir string) {
 	}
 
 	log.Logger = log.Output(zerolog.MultiLevelWriter(zerolog.ConsoleWriter{Out: os.Stderr, NoColor: true, TimeFormat: time.RFC3339}, zerolog.ConsoleWriter{Out: logFD, NoColor: true, TimeFormat: time.RFC3339}))
+}
+
+func boolToInt64(b bool) int64 {
+	if b {
+		return 1
+	}
+	return 0
 }
 
 func main() {
@@ -184,20 +193,20 @@ func main() {
 		return
 	}
 
+	ds := os.Getenv("DATA_SOURCE")
+	pgDB, err := sql.Open("pgx", ds)
+	if err != nil {
+		log.Fatal().Err(err).Msg("failed to connect to postgres")
+		return
+	}
+	defer pgDB.Close()
+
 	/*
 		contacts, err := db.GetContacts("", 0, 0)
 		if err != nil {
 			log.Fatal().Err(err).Msg("failed to get contacts")
 			return
 		}
-
-		ds := os.Getenv("DATA_SOURCE")
-		pgDB, err := sql.Open("pgx", ds)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to connect to postgres")
-			return
-		}
-		defer pgDB.Close()
 
 		ctx := context.Background()
 
@@ -226,15 +235,77 @@ func main() {
 
 		log.Info().Ints("count", []int{successCount, failCount}).Msg("contacts saved to postgres")
 	*/
+	/*
+		rooms, err := db.GetChatRooms("", 0, 0)
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to get rooms")
+			return
+		}
+		ctx := context.Background()
 
-	rooms, err := db.GetChatRooms("", 0, 0)
+		stmt, err := pgDB.PrepareContext(ctx, `
+				INSERT INTO chat_room (name, owner, remark, nick_name, users)
+				VALUES ($1, $2, $3, $4, $5)
+			`)
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to prepare statement")
+			return
+		}
+		defer stmt.Close()
+		successCount := 0
+		failCount := 0
+		for _, room := range rooms.Items {
+			log.Info().Interface("room", room).Msg("room")
+			_, err := stmt.ExecContext(ctx, room.Name, room.Owner, room.Remark, room.NickName, room.Users)
+			if err != nil {
+				log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to insert chat room")
+				failCount++
+				continue
+			}
+			successCount++
+		}
+		log.Info().Ints("count", []int{successCount, failCount}).Msg("chat rooms saved to postgres")
+	*/
+	ctx := context.Background()
+
+	stmt, err := pgDB.PrepareContext(ctx, `
+			INSERT INTO message (seq, time, talker, talker_name, is_chat_room, sender, is_self, type, sub_type, content, contents)
+			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+		`)
 	if err != nil {
-		log.Fatal().Err(err).Msg("failed to get rooms")
+		log.Fatal().Err(err).Msg("failed to prepare statement")
 		return
 	}
-	for _, room := range rooms.Items {
-		log.Info().Interface("room", room).Msg("room")
+	defer stmt.Close()
+
+	contacts, err := db.GetContacts("", 0, 0)
+	if err != nil {
+		log.Fatal().Err(err).Msg("failed to get contacts")
+		return
 	}
+
+	for _, contact := range contacts.Items {
+		log.Info().Interface("contact", contact).Msg("contact")
+		successCount := 0
+		failCount := 0
+		messages, err := db.GetMessages(time.Unix(0, 0), time.Now(), contact.UserName, "", "", 0, 0)
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to get messages")
+			return
+		}
+		for _, message := range messages {
+			log.Info().Interface("message", message.PlainTextContent()).Msg("message")
+			_, err := stmt.ExecContext(ctx, message.Seq, message.Time, message.Talker, message.TalkerName, boolToInt64(message.IsChatRoom), message.Sender, boolToInt64(message.IsSelf), message.Type, message.SubType, message.Content, message.Contents)
+			if err != nil {
+				log.Error().Err(err).Str("message", message.Content).Msg("failed to insert message")
+				failCount++
+				continue
+			}
+			successCount++
+		}
+		log.Info().Ints("count", []int{successCount, failCount}).Msg("chat rooms saved to postgres")
+	}
+
 	/*
 		// db migration
 		dbFiles, err := pgmigrate.ListDBFiles(os.Getenv("DB_PATH"))
