@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS wechat_contact (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_name TEXT NOT NULL UNIQUE,
+      alias TEXT,
+      remark TEXT,
+      nick_name TEXT,
+      is_friend INTEGER DEFAULT 0,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS wechat_chat_room (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      owner TEXT NOT NULL DEFAULT '',
+      remark TEXT NOT NULL DEFAULT '',
+      nick_name TEXT NOT NULL DEFAULT '',
+      users TEXT DEFAULT '[]',
+      created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS wechat_message (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      seq INTEGER NOT NULL,
+      time TIMESTAMP NOT NULL,
+      talker TEXT NOT NULL,
+      talker_name TEXT NOT NULL DEFAULT '',
+      is_chat_room INTEGER NOT NULL DEFAULT 0,
+      sender TEXT NOT NULL,
+      sender_name TEXT NOT NULL DEFAULT '',
+      is_self INTEGER NOT NULL DEFAULT 0,
+      type INTEGER NOT NULL DEFAULT 0,
+      sub_type INTEGER NOT NULL DEFAULT 0,
+      content TEXT NOT NULL DEFAULT '',
+      contents TEXT NOT NULL DEFAULT '{}',
+      created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
