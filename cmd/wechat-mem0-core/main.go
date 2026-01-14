@@ -2,13 +2,12 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"os"
 	"path/filepath"
 	"strconv"
 	"time"
 
-	_ "github.com/jackc/pgx/v5/stdlib"
+	"github.com/jackc/pgx/v5"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/sjzar/chatlog/internal/chatlog"
@@ -194,12 +193,12 @@ func main() {
 	}
 
 	ds := os.Getenv("DATA_SOURCE")
-	pgDB, err := sql.Open("pgx", ds)
+	pgConn, err := pgx.Connect(context.Background(), ds)
 	if err != nil {
 		log.Fatal().Err(err).Msg("failed to connect to postgres")
 		return
 	}
-	defer pgDB.Close()
+	defer pgConn.Close(context.Background())
 
 	/*
 		contacts, err := db.GetContacts("", 0, 0)
@@ -268,16 +267,6 @@ func main() {
 	*/
 	ctx := context.Background()
 
-	stmt, err := pgDB.PrepareContext(ctx, `
-			INSERT INTO message (seq, time, talker, talker_name, is_chat_room, sender, is_self, type, sub_type, content, contents)
-			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
-		`)
-	if err != nil {
-		log.Fatal().Err(err).Msg("failed to prepare statement")
-		return
-	}
-	defer stmt.Close()
-
 	contacts, err := db.GetContacts("", 0, 0)
 	if err != nil {
 		log.Fatal().Err(err).Msg("failed to get contacts")
@@ -286,24 +275,41 @@ func main() {
 
 	for _, contact := range contacts.Items {
 		log.Info().Interface("contact", contact).Msg("contact")
-		successCount := 0
-		failCount := 0
 		messages, err := db.GetMessages(time.Unix(0, 0), time.Now(), contact.UserName, "", "", 0, 0)
 		if err != nil {
 			log.Fatal().Err(err).Msg("failed to get messages")
 			return
 		}
-		for _, message := range messages {
-			log.Info().Interface("message", message.PlainTextContent()).Msg("message")
-			_, err := stmt.ExecContext(ctx, message.Seq, message.Time, message.Talker, message.TalkerName, boolToInt64(message.IsChatRoom), message.Sender, boolToInt64(message.IsSelf), message.Type, message.SubType, message.Content, message.Contents)
-			if err != nil {
-				log.Error().Err(err).Str("message", message.Content).Msg("failed to insert message")
-				failCount++
-				continue
-			}
-			successCount++
+
+		if len(messages) == 0 {
+			continue
 		}
-		log.Info().Ints("count", []int{successCount, failCount}).Msg("chat rooms saved to postgres")
+
+		log.Info().Int("batch_size", len(messages)).Msg("batch importing messages")
+
+		rows := make([][]interface{}, 0, len(messages))
+		for _, message := range messages {
+			rows = append(rows, []interface{}{
+				message.Seq,
+				message.Time,
+				message.Talker,
+				message.TalkerName,
+				boolToInt64(message.IsChatRoom),
+				message.Sender,
+				boolToInt64(message.IsSelf),
+				message.Type,
+				message.SubType,
+				message.Content,
+				message.Contents,
+			})
+		}
+
+		_, err = pgConn.CopyFrom(ctx, pgx.Identifier{"message"}, []string{"seq", "time", "talker", "talker_name", "is_chat_room", "sender", "is_self", "type", "sub_type", "content", "contents"}, pgx.CopyFromRows(rows))
+		if err != nil {
+			log.Fatal().Err(err).Msg("failed to batch insert messages")
+			return
+		}
+		log.Info().Int("count", len(messages)).Msg("messages saved to postgres")
 	}
 
 	/*
