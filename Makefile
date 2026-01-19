@@ -156,9 +156,9 @@ proto:
 proto-js:
 	@echo "Compiling protobuf for JavaScript..."
 	@mkdir -p $(PB_JS_OUT)
-	pnpm exec grpc_tools_node_protoc \
+	./examples/client-node/node_modules/.bin/grpc_tools_node_protoc \
 		--js_out=import_style=commonjs,binary:$(PB_JS_OUT) \
 		--grpc_out=grpc_js:$(PB_JS_OUT) \
-		--plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` \
+		--plugin=protoc-gen-grpc=./examples/client-node/node_modules/.bin/grpc_tools_node_protoc_plugin \
 		proto/chatlog.proto
 	@echo "JavaScript protobuf compilation complete."
