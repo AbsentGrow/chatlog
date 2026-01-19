@@ -162,23 +162,23 @@ func (m *SQLiteMigration) ExportChatRoom() error {
 	defer stmt.Close()
 
 	successCount := 0
-		failCount := 0
-		for _, room := range rooms.Items {
-			log.Info().Interface("room", room).Msg("room")
-			usersJSON, err := json.Marshal(room.Users)
-			if err != nil {
-				log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to marshal users")
-				failCount++
-				continue
-			}
-			_, err = stmt.ExecContext(ctx, room.Name, room.Owner, room.Remark, room.NickName, string(usersJSON))
-			if err != nil {
-				log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to insert chat room")
-				failCount++
-				continue
-			}
-			successCount++
+	failCount := 0
+	for _, room := range rooms.Items {
+		log.Info().Interface("room", room).Msg("room")
+		usersJSON, err := json.Marshal(room.Users)
+		if err != nil {
+			log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to marshal users")
+			failCount++
+			continue
 		}
+		_, err = stmt.ExecContext(ctx, room.Name, room.Owner, room.Remark, room.NickName, string(usersJSON))
+		if err != nil {
+			log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to insert chat room")
+			failCount++
+			continue
+		}
+		successCount++
+	}
 
 	if err := tx.Commit(); err != nil {
 		log.Error().Err(err).Msg("failed to commit transaction")
