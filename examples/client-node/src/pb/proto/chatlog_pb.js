@@ -21,42 +21,44 @@ var global = (function() {
   return Function('return this')();
 }.call(null));
 
-goog.exportSymbol('proto.ipc.Account', null, global);
-goog.exportSymbol('proto.ipc.CommandDecryptRequest', null, global);
-goog.exportSymbol('proto.ipc.CommandDecryptResponse', null, global);
-goog.exportSymbol('proto.ipc.CommandHTTPServerRequest', null, global);
-goog.exportSymbol('proto.ipc.CommandHTTPServerResponse', null, global);
-goog.exportSymbol('proto.ipc.CommandKeyRequest', null, global);
-goog.exportSymbol('proto.ipc.CommandKeyResponse', null, global);
-goog.exportSymbol('proto.ipc.DecryptDBFilesRequest', null, global);
-goog.exportSymbol('proto.ipc.DecryptDBFilesResponse', null, global);
-goog.exportSymbol('proto.ipc.DecryptRequest', null, global);
-goog.exportSymbol('proto.ipc.DecryptResponse', null, global);
-goog.exportSymbol('proto.ipc.GetDataKeyRequest', null, global);
-goog.exportSymbol('proto.ipc.GetDataKeyResponse', null, global);
-goog.exportSymbol('proto.ipc.GetKeyRequest', null, global);
-goog.exportSymbol('proto.ipc.GetKeyResponse', null, global);
-goog.exportSymbol('proto.ipc.GetWeChatInstancesRequest', null, global);
-goog.exportSymbol('proto.ipc.GetWeChatInstancesResponse', null, global);
-goog.exportSymbol('proto.ipc.KeyData', null, global);
-goog.exportSymbol('proto.ipc.RefreshSessionRequest', null, global);
-goog.exportSymbol('proto.ipc.RefreshSessionResponse', null, global);
-goog.exportSymbol('proto.ipc.RunRequest', null, global);
-goog.exportSymbol('proto.ipc.RunResponse', null, global);
-goog.exportSymbol('proto.ipc.SetHTTPAddrRequest', null, global);
-goog.exportSymbol('proto.ipc.SetHTTPAddrResponse', null, global);
-goog.exportSymbol('proto.ipc.SetLogLevelRequest', null, global);
-goog.exportSymbol('proto.ipc.SetLogLevelResponse', null, global);
-goog.exportSymbol('proto.ipc.StartAutoDecryptRequest', null, global);
-goog.exportSymbol('proto.ipc.StartAutoDecryptResponse', null, global);
-goog.exportSymbol('proto.ipc.StartServiceRequest', null, global);
-goog.exportSymbol('proto.ipc.StartServiceResponse', null, global);
-goog.exportSymbol('proto.ipc.StopAutoDecryptRequest', null, global);
-goog.exportSymbol('proto.ipc.StopAutoDecryptResponse', null, global);
-goog.exportSymbol('proto.ipc.StopServiceRequest', null, global);
-goog.exportSymbol('proto.ipc.StopServiceResponse', null, global);
-goog.exportSymbol('proto.ipc.SwitchRequest', null, global);
-goog.exportSymbol('proto.ipc.SwitchResponse', null, global);
+goog.exportSymbol('proto.chatlog.Account', null, global);
+goog.exportSymbol('proto.chatlog.BackupRequest', null, global);
+goog.exportSymbol('proto.chatlog.BackupResponse', null, global);
+goog.exportSymbol('proto.chatlog.CommandDecryptRequest', null, global);
+goog.exportSymbol('proto.chatlog.CommandDecryptResponse', null, global);
+goog.exportSymbol('proto.chatlog.CommandHTTPServerRequest', null, global);
+goog.exportSymbol('proto.chatlog.CommandHTTPServerResponse', null, global);
+goog.exportSymbol('proto.chatlog.CommandKeyRequest', null, global);
+goog.exportSymbol('proto.chatlog.CommandKeyResponse', null, global);
+goog.exportSymbol('proto.chatlog.DecryptDBFilesRequest', null, global);
+goog.exportSymbol('proto.chatlog.DecryptDBFilesResponse', null, global);
+goog.exportSymbol('proto.chatlog.DecryptRequest', null, global);
+goog.exportSymbol('proto.chatlog.DecryptResponse', null, global);
+goog.exportSymbol('proto.chatlog.GetDataKeyRequest', null, global);
+goog.exportSymbol('proto.chatlog.GetDataKeyResponse', null, global);
+goog.exportSymbol('proto.chatlog.GetKeyRequest', null, global);
+goog.exportSymbol('proto.chatlog.GetKeyResponse', null, global);
+goog.exportSymbol('proto.chatlog.GetWeChatInstancesRequest', null, global);
+goog.exportSymbol('proto.chatlog.GetWeChatInstancesResponse', null, global);
+goog.exportSymbol('proto.chatlog.KeyData', null, global);
+goog.exportSymbol('proto.chatlog.RefreshSessionRequest', null, global);
+goog.exportSymbol('proto.chatlog.RefreshSessionResponse', null, global);
+goog.exportSymbol('proto.chatlog.RunRequest', null, global);
+goog.exportSymbol('proto.chatlog.RunResponse', null, global);
+goog.exportSymbol('proto.chatlog.SetHTTPAddrRequest', null, global);
+goog.exportSymbol('proto.chatlog.SetHTTPAddrResponse', null, global);
+goog.exportSymbol('proto.chatlog.SetLogLevelRequest', null, global);
+goog.exportSymbol('proto.chatlog.SetLogLevelResponse', null, global);
+goog.exportSymbol('proto.chatlog.StartAutoDecryptRequest', null, global);
+goog.exportSymbol('proto.chatlog.StartAutoDecryptResponse', null, global);
+goog.exportSymbol('proto.chatlog.StartServiceRequest', null, global);
+goog.exportSymbol('proto.chatlog.StartServiceResponse', null, global);
+goog.exportSymbol('proto.chatlog.StopAutoDecryptRequest', null, global);
+goog.exportSymbol('proto.chatlog.StopAutoDecryptResponse', null, global);
+goog.exportSymbol('proto.chatlog.StopServiceRequest', null, global);
+goog.exportSymbol('proto.chatlog.StopServiceResponse', null, global);
+goog.exportSymbol('proto.chatlog.SwitchRequest', null, global);
+goog.exportSymbol('proto.chatlog.SwitchResponse', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -67,16 +69,16 @@ goog.exportSymbol('proto.ipc.SwitchResponse', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SetLogLevelRequest = function(opt_data) {
+proto.chatlog.SetLogLevelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SetLogLevelRequest, jspb.Message);
+goog.inherits(proto.chatlog.SetLogLevelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SetLogLevelRequest.displayName = 'proto.ipc.SetLogLevelRequest';
+  proto.chatlog.SetLogLevelRequest.displayName = 'proto.chatlog.SetLogLevelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -88,16 +90,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SetLogLevelResponse = function(opt_data) {
+proto.chatlog.SetLogLevelResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SetLogLevelResponse, jspb.Message);
+goog.inherits(proto.chatlog.SetLogLevelResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SetLogLevelResponse.displayName = 'proto.ipc.SetLogLevelResponse';
+  proto.chatlog.SetLogLevelResponse.displayName = 'proto.chatlog.SetLogLevelResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -109,16 +111,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.Account = function(opt_data) {
+proto.chatlog.Account = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.Account, jspb.Message);
+goog.inherits(proto.chatlog.Account, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.Account.displayName = 'proto.ipc.Account';
+  proto.chatlog.Account.displayName = 'proto.chatlog.Account';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -130,16 +132,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.KeyData = function(opt_data) {
+proto.chatlog.KeyData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.KeyData, jspb.Message);
+goog.inherits(proto.chatlog.KeyData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.KeyData.displayName = 'proto.ipc.KeyData';
+  proto.chatlog.KeyData.displayName = 'proto.chatlog.KeyData';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -151,16 +153,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.RunRequest = function(opt_data) {
+proto.chatlog.RunRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.RunRequest, jspb.Message);
+goog.inherits(proto.chatlog.RunRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.RunRequest.displayName = 'proto.ipc.RunRequest';
+  proto.chatlog.RunRequest.displayName = 'proto.chatlog.RunRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -172,16 +174,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.RunResponse = function(opt_data) {
+proto.chatlog.RunResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.RunResponse, jspb.Message);
+goog.inherits(proto.chatlog.RunResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.RunResponse.displayName = 'proto.ipc.RunResponse';
+  proto.chatlog.RunResponse.displayName = 'proto.chatlog.RunResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -193,16 +195,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SwitchRequest = function(opt_data) {
+proto.chatlog.SwitchRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SwitchRequest, jspb.Message);
+goog.inherits(proto.chatlog.SwitchRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SwitchRequest.displayName = 'proto.ipc.SwitchRequest';
+  proto.chatlog.SwitchRequest.displayName = 'proto.chatlog.SwitchRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -214,16 +216,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SwitchResponse = function(opt_data) {
+proto.chatlog.SwitchResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SwitchResponse, jspb.Message);
+goog.inherits(proto.chatlog.SwitchResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SwitchResponse.displayName = 'proto.ipc.SwitchResponse';
+  proto.chatlog.SwitchResponse.displayName = 'proto.chatlog.SwitchResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -235,16 +237,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StartServiceRequest = function(opt_data) {
+proto.chatlog.StartServiceRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StartServiceRequest, jspb.Message);
+goog.inherits(proto.chatlog.StartServiceRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StartServiceRequest.displayName = 'proto.ipc.StartServiceRequest';
+  proto.chatlog.StartServiceRequest.displayName = 'proto.chatlog.StartServiceRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -256,16 +258,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StartServiceResponse = function(opt_data) {
+proto.chatlog.StartServiceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StartServiceResponse, jspb.Message);
+goog.inherits(proto.chatlog.StartServiceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StartServiceResponse.displayName = 'proto.ipc.StartServiceResponse';
+  proto.chatlog.StartServiceResponse.displayName = 'proto.chatlog.StartServiceResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -277,16 +279,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StopServiceRequest = function(opt_data) {
+proto.chatlog.StopServiceRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StopServiceRequest, jspb.Message);
+goog.inherits(proto.chatlog.StopServiceRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StopServiceRequest.displayName = 'proto.ipc.StopServiceRequest';
+  proto.chatlog.StopServiceRequest.displayName = 'proto.chatlog.StopServiceRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -298,16 +300,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StopServiceResponse = function(opt_data) {
+proto.chatlog.StopServiceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StopServiceResponse, jspb.Message);
+goog.inherits(proto.chatlog.StopServiceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StopServiceResponse.displayName = 'proto.ipc.StopServiceResponse';
+  proto.chatlog.StopServiceResponse.displayName = 'proto.chatlog.StopServiceResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -319,16 +321,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SetHTTPAddrRequest = function(opt_data) {
+proto.chatlog.SetHTTPAddrRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SetHTTPAddrRequest, jspb.Message);
+goog.inherits(proto.chatlog.SetHTTPAddrRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SetHTTPAddrRequest.displayName = 'proto.ipc.SetHTTPAddrRequest';
+  proto.chatlog.SetHTTPAddrRequest.displayName = 'proto.chatlog.SetHTTPAddrRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -340,16 +342,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.SetHTTPAddrResponse = function(opt_data) {
+proto.chatlog.SetHTTPAddrResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.SetHTTPAddrResponse, jspb.Message);
+goog.inherits(proto.chatlog.SetHTTPAddrResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.SetHTTPAddrResponse.displayName = 'proto.ipc.SetHTTPAddrResponse';
+  proto.chatlog.SetHTTPAddrResponse.displayName = 'proto.chatlog.SetHTTPAddrResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -361,16 +363,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetDataKeyRequest = function(opt_data) {
+proto.chatlog.GetDataKeyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.GetDataKeyRequest, jspb.Message);
+goog.inherits(proto.chatlog.GetDataKeyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetDataKeyRequest.displayName = 'proto.ipc.GetDataKeyRequest';
+  proto.chatlog.GetDataKeyRequest.displayName = 'proto.chatlog.GetDataKeyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -382,16 +384,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetDataKeyResponse = function(opt_data) {
+proto.chatlog.GetDataKeyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.GetDataKeyResponse, jspb.Message);
+goog.inherits(proto.chatlog.GetDataKeyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetDataKeyResponse.displayName = 'proto.ipc.GetDataKeyResponse';
+  proto.chatlog.GetDataKeyResponse.displayName = 'proto.chatlog.GetDataKeyResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -403,16 +405,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.DecryptDBFilesRequest = function(opt_data) {
+proto.chatlog.DecryptDBFilesRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.DecryptDBFilesRequest, jspb.Message);
+goog.inherits(proto.chatlog.DecryptDBFilesRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.DecryptDBFilesRequest.displayName = 'proto.ipc.DecryptDBFilesRequest';
+  proto.chatlog.DecryptDBFilesRequest.displayName = 'proto.chatlog.DecryptDBFilesRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -424,16 +426,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.DecryptDBFilesResponse = function(opt_data) {
+proto.chatlog.DecryptDBFilesResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.DecryptDBFilesResponse, jspb.Message);
+goog.inherits(proto.chatlog.DecryptDBFilesResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.DecryptDBFilesResponse.displayName = 'proto.ipc.DecryptDBFilesResponse';
+  proto.chatlog.DecryptDBFilesResponse.displayName = 'proto.chatlog.DecryptDBFilesResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -445,16 +447,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StartAutoDecryptRequest = function(opt_data) {
+proto.chatlog.StartAutoDecryptRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StartAutoDecryptRequest, jspb.Message);
+goog.inherits(proto.chatlog.StartAutoDecryptRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StartAutoDecryptRequest.displayName = 'proto.ipc.StartAutoDecryptRequest';
+  proto.chatlog.StartAutoDecryptRequest.displayName = 'proto.chatlog.StartAutoDecryptRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -466,16 +468,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StartAutoDecryptResponse = function(opt_data) {
+proto.chatlog.StartAutoDecryptResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StartAutoDecryptResponse, jspb.Message);
+goog.inherits(proto.chatlog.StartAutoDecryptResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StartAutoDecryptResponse.displayName = 'proto.ipc.StartAutoDecryptResponse';
+  proto.chatlog.StartAutoDecryptResponse.displayName = 'proto.chatlog.StartAutoDecryptResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -487,16 +489,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StopAutoDecryptRequest = function(opt_data) {
+proto.chatlog.BackupRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StopAutoDecryptRequest, jspb.Message);
+goog.inherits(proto.chatlog.BackupRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StopAutoDecryptRequest.displayName = 'proto.ipc.StopAutoDecryptRequest';
+  proto.chatlog.BackupRequest.displayName = 'proto.chatlog.BackupRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -508,16 +510,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.StopAutoDecryptResponse = function(opt_data) {
+proto.chatlog.BackupResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.StopAutoDecryptResponse, jspb.Message);
+goog.inherits(proto.chatlog.BackupResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.StopAutoDecryptResponse.displayName = 'proto.ipc.StopAutoDecryptResponse';
+  proto.chatlog.BackupResponse.displayName = 'proto.chatlog.BackupResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -529,16 +531,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.RefreshSessionRequest = function(opt_data) {
+proto.chatlog.StopAutoDecryptRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.RefreshSessionRequest, jspb.Message);
+goog.inherits(proto.chatlog.StopAutoDecryptRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.RefreshSessionRequest.displayName = 'proto.ipc.RefreshSessionRequest';
+  proto.chatlog.StopAutoDecryptRequest.displayName = 'proto.chatlog.StopAutoDecryptRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -550,16 +552,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.RefreshSessionResponse = function(opt_data) {
+proto.chatlog.StopAutoDecryptResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.RefreshSessionResponse, jspb.Message);
+goog.inherits(proto.chatlog.StopAutoDecryptResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.RefreshSessionResponse.displayName = 'proto.ipc.RefreshSessionResponse';
+  proto.chatlog.StopAutoDecryptResponse.displayName = 'proto.chatlog.StopAutoDecryptResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -571,16 +573,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandKeyRequest = function(opt_data) {
+proto.chatlog.RefreshSessionRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandKeyRequest, jspb.Message);
+goog.inherits(proto.chatlog.RefreshSessionRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandKeyRequest.displayName = 'proto.ipc.CommandKeyRequest';
+  proto.chatlog.RefreshSessionRequest.displayName = 'proto.chatlog.RefreshSessionRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -592,16 +594,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandKeyResponse = function(opt_data) {
+proto.chatlog.RefreshSessionResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandKeyResponse, jspb.Message);
+goog.inherits(proto.chatlog.RefreshSessionResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandKeyResponse.displayName = 'proto.ipc.CommandKeyResponse';
+  proto.chatlog.RefreshSessionResponse.displayName = 'proto.chatlog.RefreshSessionResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -613,16 +615,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandDecryptRequest = function(opt_data) {
+proto.chatlog.CommandKeyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandDecryptRequest, jspb.Message);
+goog.inherits(proto.chatlog.CommandKeyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandDecryptRequest.displayName = 'proto.ipc.CommandDecryptRequest';
+  proto.chatlog.CommandKeyRequest.displayName = 'proto.chatlog.CommandKeyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -634,16 +636,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandDecryptResponse = function(opt_data) {
+proto.chatlog.CommandKeyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandDecryptResponse, jspb.Message);
+goog.inherits(proto.chatlog.CommandKeyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandDecryptResponse.displayName = 'proto.ipc.CommandDecryptResponse';
+  proto.chatlog.CommandKeyResponse.displayName = 'proto.chatlog.CommandKeyResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -655,16 +657,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandHTTPServerRequest = function(opt_data) {
+proto.chatlog.CommandDecryptRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandHTTPServerRequest, jspb.Message);
+goog.inherits(proto.chatlog.CommandDecryptRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandHTTPServerRequest.displayName = 'proto.ipc.CommandHTTPServerRequest';
+  proto.chatlog.CommandDecryptRequest.displayName = 'proto.chatlog.CommandDecryptRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -676,16 +678,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.CommandHTTPServerResponse = function(opt_data) {
+proto.chatlog.CommandDecryptResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.CommandHTTPServerResponse, jspb.Message);
+goog.inherits(proto.chatlog.CommandDecryptResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.CommandHTTPServerResponse.displayName = 'proto.ipc.CommandHTTPServerResponse';
+  proto.chatlog.CommandDecryptResponse.displayName = 'proto.chatlog.CommandDecryptResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -697,16 +699,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetWeChatInstancesRequest = function(opt_data) {
+proto.chatlog.CommandHTTPServerRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.GetWeChatInstancesRequest, jspb.Message);
+goog.inherits(proto.chatlog.CommandHTTPServerRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetWeChatInstancesRequest.displayName = 'proto.ipc.GetWeChatInstancesRequest';
+  proto.chatlog.CommandHTTPServerRequest.displayName = 'proto.chatlog.CommandHTTPServerRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -718,16 +720,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetWeChatInstancesResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ipc.GetWeChatInstancesResponse.repeatedFields_, null);
+proto.chatlog.CommandHTTPServerResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.GetWeChatInstancesResponse, jspb.Message);
+goog.inherits(proto.chatlog.CommandHTTPServerResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetWeChatInstancesResponse.displayName = 'proto.ipc.GetWeChatInstancesResponse';
+  proto.chatlog.CommandHTTPServerResponse.displayName = 'proto.chatlog.CommandHTTPServerResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -739,16 +741,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetKeyRequest = function(opt_data) {
+proto.chatlog.GetWeChatInstancesRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.GetKeyRequest, jspb.Message);
+goog.inherits(proto.chatlog.GetWeChatInstancesRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetKeyRequest.displayName = 'proto.ipc.GetKeyRequest';
+  proto.chatlog.GetWeChatInstancesRequest.displayName = 'proto.chatlog.GetWeChatInstancesRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -760,16 +762,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.GetKeyResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.chatlog.GetWeChatInstancesResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.chatlog.GetWeChatInstancesResponse.repeatedFields_, null);
 };
-goog.inherits(proto.ipc.GetKeyResponse, jspb.Message);
+goog.inherits(proto.chatlog.GetWeChatInstancesResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.GetKeyResponse.displayName = 'proto.ipc.GetKeyResponse';
+  proto.chatlog.GetWeChatInstancesResponse.displayName = 'proto.chatlog.GetWeChatInstancesResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -781,16 +783,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.DecryptRequest = function(opt_data) {
+proto.chatlog.GetKeyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.DecryptRequest, jspb.Message);
+goog.inherits(proto.chatlog.GetKeyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.DecryptRequest.displayName = 'proto.ipc.DecryptRequest';
+  proto.chatlog.GetKeyRequest.displayName = 'proto.chatlog.GetKeyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -802,16 +804,58 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ipc.DecryptResponse = function(opt_data) {
+proto.chatlog.GetKeyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ipc.DecryptResponse, jspb.Message);
+goog.inherits(proto.chatlog.GetKeyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ipc.DecryptResponse.displayName = 'proto.ipc.DecryptResponse';
+  proto.chatlog.GetKeyResponse.displayName = 'proto.chatlog.GetKeyResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.chatlog.DecryptRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.chatlog.DecryptRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.chatlog.DecryptRequest.displayName = 'proto.chatlog.DecryptRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.chatlog.DecryptResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.chatlog.DecryptResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.chatlog.DecryptResponse.displayName = 'proto.chatlog.DecryptResponse';
 }
 
 
@@ -829,8 +873,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SetLogLevelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SetLogLevelRequest.toObject(opt_includeInstance, this);
+proto.chatlog.SetLogLevelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SetLogLevelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -839,11 +883,11 @@ proto.ipc.SetLogLevelRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SetLogLevelRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.SetLogLevelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetLogLevelRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.SetLogLevelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     level: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -859,23 +903,23 @@ proto.ipc.SetLogLevelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SetLogLevelRequest}
+ * @return {!proto.chatlog.SetLogLevelRequest}
  */
-proto.ipc.SetLogLevelRequest.deserializeBinary = function(bytes) {
+proto.chatlog.SetLogLevelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SetLogLevelRequest;
-  return proto.ipc.SetLogLevelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SetLogLevelRequest;
+  return proto.chatlog.SetLogLevelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SetLogLevelRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SetLogLevelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SetLogLevelRequest}
+ * @return {!proto.chatlog.SetLogLevelRequest}
  */
-proto.ipc.SetLogLevelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SetLogLevelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -899,9 +943,9 @@ proto.ipc.SetLogLevelRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SetLogLevelRequest.prototype.serializeBinary = function() {
+proto.chatlog.SetLogLevelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SetLogLevelRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SetLogLevelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -909,11 +953,11 @@ proto.ipc.SetLogLevelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SetLogLevelRequest} message
+ * @param {!proto.chatlog.SetLogLevelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetLogLevelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SetLogLevelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLevel();
   if (f.length > 0) {
@@ -929,16 +973,16 @@ proto.ipc.SetLogLevelRequest.serializeBinaryToWriter = function(message, writer)
  * optional string level = 1;
  * @return {string}
  */
-proto.ipc.SetLogLevelRequest.prototype.getLevel = function() {
+proto.chatlog.SetLogLevelRequest.prototype.getLevel = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.SetLogLevelRequest} returns this
+ * @return {!proto.chatlog.SetLogLevelRequest} returns this
  */
-proto.ipc.SetLogLevelRequest.prototype.setLevel = function(value) {
+proto.chatlog.SetLogLevelRequest.prototype.setLevel = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -959,8 +1003,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SetLogLevelResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SetLogLevelResponse.toObject(opt_includeInstance, this);
+proto.chatlog.SetLogLevelResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SetLogLevelResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -969,11 +1013,11 @@ proto.ipc.SetLogLevelResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SetLogLevelResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.SetLogLevelResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetLogLevelResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.SetLogLevelResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -989,23 +1033,23 @@ proto.ipc.SetLogLevelResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SetLogLevelResponse}
+ * @return {!proto.chatlog.SetLogLevelResponse}
  */
-proto.ipc.SetLogLevelResponse.deserializeBinary = function(bytes) {
+proto.chatlog.SetLogLevelResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SetLogLevelResponse;
-  return proto.ipc.SetLogLevelResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SetLogLevelResponse;
+  return proto.chatlog.SetLogLevelResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SetLogLevelResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SetLogLevelResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SetLogLevelResponse}
+ * @return {!proto.chatlog.SetLogLevelResponse}
  */
-proto.ipc.SetLogLevelResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SetLogLevelResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1025,9 +1069,9 @@ proto.ipc.SetLogLevelResponse.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SetLogLevelResponse.prototype.serializeBinary = function() {
+proto.chatlog.SetLogLevelResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SetLogLevelResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SetLogLevelResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1035,11 +1079,11 @@ proto.ipc.SetLogLevelResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SetLogLevelResponse} message
+ * @param {!proto.chatlog.SetLogLevelResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetLogLevelResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SetLogLevelResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -1060,8 +1104,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.Account.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.Account.toObject(opt_includeInstance, this);
+proto.chatlog.Account.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.Account.toObject(opt_includeInstance, this);
 };
 
 
@@ -1070,11 +1114,11 @@ proto.ipc.Account.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.Account} msg The msg instance to transform.
+ * @param {!proto.chatlog.Account} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.Account.toObject = function(includeInstance, msg) {
+proto.chatlog.Account.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     platform: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -1099,23 +1143,23 @@ proto.ipc.Account.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.Account}
+ * @return {!proto.chatlog.Account}
  */
-proto.ipc.Account.deserializeBinary = function(bytes) {
+proto.chatlog.Account.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.Account;
-  return proto.ipc.Account.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.Account;
+  return proto.chatlog.Account.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.Account} msg The message object to deserialize into.
+ * @param {!proto.chatlog.Account} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.Account}
+ * @return {!proto.chatlog.Account}
  */
-proto.ipc.Account.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.Account.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1175,9 +1219,9 @@ proto.ipc.Account.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.Account.prototype.serializeBinary = function() {
+proto.chatlog.Account.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.Account.serializeBinaryToWriter(this, writer);
+  proto.chatlog.Account.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1185,11 +1229,11 @@ proto.ipc.Account.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.Account} message
+ * @param {!proto.chatlog.Account} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.Account.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.Account.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getName();
   if (f.length > 0) {
@@ -1268,16 +1312,16 @@ proto.ipc.Account.serializeBinaryToWriter = function(message, writer) {
  * optional string name = 1;
  * @return {string}
  */
-proto.ipc.Account.prototype.getName = function() {
+proto.chatlog.Account.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setName = function(value) {
+proto.chatlog.Account.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1286,16 +1330,16 @@ proto.ipc.Account.prototype.setName = function(value) {
  * optional string platform = 2;
  * @return {string}
  */
-proto.ipc.Account.prototype.getPlatform = function() {
+proto.chatlog.Account.prototype.getPlatform = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setPlatform = function(value) {
+proto.chatlog.Account.prototype.setPlatform = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1304,16 +1348,16 @@ proto.ipc.Account.prototype.setPlatform = function(value) {
  * optional int32 version = 3;
  * @return {number}
  */
-proto.ipc.Account.prototype.getVersion = function() {
+proto.chatlog.Account.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setVersion = function(value) {
+proto.chatlog.Account.prototype.setVersion = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -1322,16 +1366,16 @@ proto.ipc.Account.prototype.setVersion = function(value) {
  * optional string full_version = 4;
  * @return {string}
  */
-proto.ipc.Account.prototype.getFullVersion = function() {
+proto.chatlog.Account.prototype.getFullVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setFullVersion = function(value) {
+proto.chatlog.Account.prototype.setFullVersion = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -1340,16 +1384,16 @@ proto.ipc.Account.prototype.setFullVersion = function(value) {
  * optional string data_dir = 5;
  * @return {string}
  */
-proto.ipc.Account.prototype.getDataDir = function() {
+proto.chatlog.Account.prototype.getDataDir = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setDataDir = function(value) {
+proto.chatlog.Account.prototype.setDataDir = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -1358,16 +1402,16 @@ proto.ipc.Account.prototype.setDataDir = function(value) {
  * optional string key = 6;
  * @return {string}
  */
-proto.ipc.Account.prototype.getKey = function() {
+proto.chatlog.Account.prototype.getKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setKey = function(value) {
+proto.chatlog.Account.prototype.setKey = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -1376,16 +1420,16 @@ proto.ipc.Account.prototype.setKey = function(value) {
  * optional string img_key = 7;
  * @return {string}
  */
-proto.ipc.Account.prototype.getImgKey = function() {
+proto.chatlog.Account.prototype.getImgKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setImgKey = function(value) {
+proto.chatlog.Account.prototype.setImgKey = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -1394,16 +1438,16 @@ proto.ipc.Account.prototype.setImgKey = function(value) {
  * optional uint32 pid = 8;
  * @return {number}
  */
-proto.ipc.Account.prototype.getPid = function() {
+proto.chatlog.Account.prototype.getPid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setPid = function(value) {
+proto.chatlog.Account.prototype.setPid = function(value) {
   return jspb.Message.setProto3IntField(this, 8, value);
 };
 
@@ -1412,16 +1456,16 @@ proto.ipc.Account.prototype.setPid = function(value) {
  * optional string exe_path = 9;
  * @return {string}
  */
-proto.ipc.Account.prototype.getExePath = function() {
+proto.chatlog.Account.prototype.getExePath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setExePath = function(value) {
+proto.chatlog.Account.prototype.setExePath = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
 };
 
@@ -1430,16 +1474,16 @@ proto.ipc.Account.prototype.setExePath = function(value) {
  * optional string status = 10;
  * @return {string}
  */
-proto.ipc.Account.prototype.getStatus = function() {
+proto.chatlog.Account.prototype.getStatus = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.Account} returns this
+ * @return {!proto.chatlog.Account} returns this
  */
-proto.ipc.Account.prototype.setStatus = function(value) {
+proto.chatlog.Account.prototype.setStatus = function(value) {
   return jspb.Message.setProto3StringField(this, 10, value);
 };
 
@@ -1460,8 +1504,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.KeyData.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.KeyData.toObject(opt_includeInstance, this);
+proto.chatlog.KeyData.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.KeyData.toObject(opt_includeInstance, this);
 };
 
 
@@ -1470,11 +1514,11 @@ proto.ipc.KeyData.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.KeyData} msg The msg instance to transform.
+ * @param {!proto.chatlog.KeyData} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.KeyData.toObject = function(includeInstance, msg) {
+proto.chatlog.KeyData.toObject = function(includeInstance, msg) {
   var f, obj = {
     key: jspb.Message.getFieldWithDefault(msg, 1, ""),
     imgKey: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -1491,23 +1535,23 @@ proto.ipc.KeyData.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.KeyData}
+ * @return {!proto.chatlog.KeyData}
  */
-proto.ipc.KeyData.deserializeBinary = function(bytes) {
+proto.chatlog.KeyData.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.KeyData;
-  return proto.ipc.KeyData.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.KeyData;
+  return proto.chatlog.KeyData.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.KeyData} msg The message object to deserialize into.
+ * @param {!proto.chatlog.KeyData} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.KeyData}
+ * @return {!proto.chatlog.KeyData}
  */
-proto.ipc.KeyData.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.KeyData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1535,9 +1579,9 @@ proto.ipc.KeyData.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.KeyData.prototype.serializeBinary = function() {
+proto.chatlog.KeyData.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.KeyData.serializeBinaryToWriter(this, writer);
+  proto.chatlog.KeyData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1545,11 +1589,11 @@ proto.ipc.KeyData.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.KeyData} message
+ * @param {!proto.chatlog.KeyData} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.KeyData.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.KeyData.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getKey();
   if (f.length > 0) {
@@ -1572,16 +1616,16 @@ proto.ipc.KeyData.serializeBinaryToWriter = function(message, writer) {
  * optional string key = 1;
  * @return {string}
  */
-proto.ipc.KeyData.prototype.getKey = function() {
+proto.chatlog.KeyData.prototype.getKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.KeyData} returns this
+ * @return {!proto.chatlog.KeyData} returns this
  */
-proto.ipc.KeyData.prototype.setKey = function(value) {
+proto.chatlog.KeyData.prototype.setKey = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1590,16 +1634,16 @@ proto.ipc.KeyData.prototype.setKey = function(value) {
  * optional string img_key = 2;
  * @return {string}
  */
-proto.ipc.KeyData.prototype.getImgKey = function() {
+proto.chatlog.KeyData.prototype.getImgKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.KeyData} returns this
+ * @return {!proto.chatlog.KeyData} returns this
  */
-proto.ipc.KeyData.prototype.setImgKey = function(value) {
+proto.chatlog.KeyData.prototype.setImgKey = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1620,8 +1664,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.RunRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.RunRequest.toObject(opt_includeInstance, this);
+proto.chatlog.RunRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.RunRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1630,11 +1674,11 @@ proto.ipc.RunRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.RunRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.RunRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RunRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.RunRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -1650,23 +1694,23 @@ proto.ipc.RunRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.RunRequest}
+ * @return {!proto.chatlog.RunRequest}
  */
-proto.ipc.RunRequest.deserializeBinary = function(bytes) {
+proto.chatlog.RunRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.RunRequest;
-  return proto.ipc.RunRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.RunRequest;
+  return proto.chatlog.RunRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.RunRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.RunRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.RunRequest}
+ * @return {!proto.chatlog.RunRequest}
  */
-proto.ipc.RunRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.RunRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1690,9 +1734,9 @@ proto.ipc.RunRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.RunRequest.prototype.serializeBinary = function() {
+proto.chatlog.RunRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.RunRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.RunRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1700,11 +1744,11 @@ proto.ipc.RunRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.RunRequest} message
+ * @param {!proto.chatlog.RunRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RunRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.RunRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -1720,16 +1764,16 @@ proto.ipc.RunRequest.serializeBinaryToWriter = function(message, writer) {
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.RunRequest.prototype.getConfigPath = function() {
+proto.chatlog.RunRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.RunRequest} returns this
+ * @return {!proto.chatlog.RunRequest} returns this
  */
-proto.ipc.RunRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.RunRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1750,8 +1794,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.RunResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.RunResponse.toObject(opt_includeInstance, this);
+proto.chatlog.RunResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.RunResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -1760,11 +1804,11 @@ proto.ipc.RunResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.RunResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.RunResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RunResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.RunResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -1780,23 +1824,23 @@ proto.ipc.RunResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.RunResponse}
+ * @return {!proto.chatlog.RunResponse}
  */
-proto.ipc.RunResponse.deserializeBinary = function(bytes) {
+proto.chatlog.RunResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.RunResponse;
-  return proto.ipc.RunResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.RunResponse;
+  return proto.chatlog.RunResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.RunResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.RunResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.RunResponse}
+ * @return {!proto.chatlog.RunResponse}
  */
-proto.ipc.RunResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.RunResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1816,9 +1860,9 @@ proto.ipc.RunResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.RunResponse.prototype.serializeBinary = function() {
+proto.chatlog.RunResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.RunResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.RunResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1826,11 +1870,11 @@ proto.ipc.RunResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.RunResponse} message
+ * @param {!proto.chatlog.RunResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RunResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.RunResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -1851,8 +1895,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SwitchRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SwitchRequest.toObject(opt_includeInstance, this);
+proto.chatlog.SwitchRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SwitchRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1861,13 +1905,13 @@ proto.ipc.SwitchRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SwitchRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.SwitchRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SwitchRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.SwitchRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.ipc.Account.toObject(includeInstance, f),
+    info: (f = msg.getInfo()) && proto.chatlog.Account.toObject(includeInstance, f),
     history: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -1882,23 +1926,23 @@ proto.ipc.SwitchRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SwitchRequest}
+ * @return {!proto.chatlog.SwitchRequest}
  */
-proto.ipc.SwitchRequest.deserializeBinary = function(bytes) {
+proto.chatlog.SwitchRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SwitchRequest;
-  return proto.ipc.SwitchRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SwitchRequest;
+  return proto.chatlog.SwitchRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SwitchRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SwitchRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SwitchRequest}
+ * @return {!proto.chatlog.SwitchRequest}
  */
-proto.ipc.SwitchRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SwitchRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1906,8 +1950,8 @@ proto.ipc.SwitchRequest.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ipc.Account;
-      reader.readMessage(value,proto.ipc.Account.deserializeBinaryFromReader);
+      var value = new proto.chatlog.Account;
+      reader.readMessage(value,proto.chatlog.Account.deserializeBinaryFromReader);
       msg.setInfo(value);
       break;
     case 2:
@@ -1927,9 +1971,9 @@ proto.ipc.SwitchRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SwitchRequest.prototype.serializeBinary = function() {
+proto.chatlog.SwitchRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SwitchRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SwitchRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1937,18 +1981,18 @@ proto.ipc.SwitchRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SwitchRequest} message
+ * @param {!proto.chatlog.SwitchRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SwitchRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SwitchRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getInfo();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ipc.Account.serializeBinaryToWriter
+      proto.chatlog.Account.serializeBinaryToWriter
     );
   }
   f = message.getHistory();
@@ -1963,28 +2007,28 @@ proto.ipc.SwitchRequest.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * optional Account info = 1;
- * @return {?proto.ipc.Account}
+ * @return {?proto.chatlog.Account}
  */
-proto.ipc.SwitchRequest.prototype.getInfo = function() {
-  return /** @type{?proto.ipc.Account} */ (
-    jspb.Message.getWrapperField(this, proto.ipc.Account, 1));
+proto.chatlog.SwitchRequest.prototype.getInfo = function() {
+  return /** @type{?proto.chatlog.Account} */ (
+    jspb.Message.getWrapperField(this, proto.chatlog.Account, 1));
 };
 
 
 /**
- * @param {?proto.ipc.Account|undefined} value
- * @return {!proto.ipc.SwitchRequest} returns this
+ * @param {?proto.chatlog.Account|undefined} value
+ * @return {!proto.chatlog.SwitchRequest} returns this
 */
-proto.ipc.SwitchRequest.prototype.setInfo = function(value) {
+proto.chatlog.SwitchRequest.prototype.setInfo = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ipc.SwitchRequest} returns this
+ * @return {!proto.chatlog.SwitchRequest} returns this
  */
-proto.ipc.SwitchRequest.prototype.clearInfo = function() {
+proto.chatlog.SwitchRequest.prototype.clearInfo = function() {
   return this.setInfo(undefined);
 };
 
@@ -1993,7 +2037,7 @@ proto.ipc.SwitchRequest.prototype.clearInfo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ipc.SwitchRequest.prototype.hasInfo = function() {
+proto.chatlog.SwitchRequest.prototype.hasInfo = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2002,16 +2046,16 @@ proto.ipc.SwitchRequest.prototype.hasInfo = function() {
  * optional string history = 2;
  * @return {string}
  */
-proto.ipc.SwitchRequest.prototype.getHistory = function() {
+proto.chatlog.SwitchRequest.prototype.getHistory = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.SwitchRequest} returns this
+ * @return {!proto.chatlog.SwitchRequest} returns this
  */
-proto.ipc.SwitchRequest.prototype.setHistory = function(value) {
+proto.chatlog.SwitchRequest.prototype.setHistory = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2032,8 +2076,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SwitchResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SwitchResponse.toObject(opt_includeInstance, this);
+proto.chatlog.SwitchResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SwitchResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2042,11 +2086,11 @@ proto.ipc.SwitchResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SwitchResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.SwitchResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SwitchResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.SwitchResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2062,23 +2106,23 @@ proto.ipc.SwitchResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SwitchResponse}
+ * @return {!proto.chatlog.SwitchResponse}
  */
-proto.ipc.SwitchResponse.deserializeBinary = function(bytes) {
+proto.chatlog.SwitchResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SwitchResponse;
-  return proto.ipc.SwitchResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SwitchResponse;
+  return proto.chatlog.SwitchResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SwitchResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SwitchResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SwitchResponse}
+ * @return {!proto.chatlog.SwitchResponse}
  */
-proto.ipc.SwitchResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SwitchResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2098,9 +2142,9 @@ proto.ipc.SwitchResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SwitchResponse.prototype.serializeBinary = function() {
+proto.chatlog.SwitchResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SwitchResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SwitchResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2108,11 +2152,11 @@ proto.ipc.SwitchResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SwitchResponse} message
+ * @param {!proto.chatlog.SwitchResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SwitchResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SwitchResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2133,8 +2177,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StartServiceRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StartServiceRequest.toObject(opt_includeInstance, this);
+proto.chatlog.StartServiceRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StartServiceRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2143,11 +2187,11 @@ proto.ipc.StartServiceRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StartServiceRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.StartServiceRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartServiceRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.StartServiceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2163,23 +2207,23 @@ proto.ipc.StartServiceRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StartServiceRequest}
+ * @return {!proto.chatlog.StartServiceRequest}
  */
-proto.ipc.StartServiceRequest.deserializeBinary = function(bytes) {
+proto.chatlog.StartServiceRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StartServiceRequest;
-  return proto.ipc.StartServiceRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StartServiceRequest;
+  return proto.chatlog.StartServiceRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StartServiceRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StartServiceRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StartServiceRequest}
+ * @return {!proto.chatlog.StartServiceRequest}
  */
-proto.ipc.StartServiceRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StartServiceRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2199,9 +2243,9 @@ proto.ipc.StartServiceRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StartServiceRequest.prototype.serializeBinary = function() {
+proto.chatlog.StartServiceRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StartServiceRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StartServiceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2209,11 +2253,11 @@ proto.ipc.StartServiceRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StartServiceRequest} message
+ * @param {!proto.chatlog.StartServiceRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartServiceRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StartServiceRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2234,8 +2278,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StartServiceResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StartServiceResponse.toObject(opt_includeInstance, this);
+proto.chatlog.StartServiceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StartServiceResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2244,11 +2288,11 @@ proto.ipc.StartServiceResponse.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StartServiceResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.StartServiceResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartServiceResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.StartServiceResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2264,23 +2308,23 @@ proto.ipc.StartServiceResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StartServiceResponse}
+ * @return {!proto.chatlog.StartServiceResponse}
  */
-proto.ipc.StartServiceResponse.deserializeBinary = function(bytes) {
+proto.chatlog.StartServiceResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StartServiceResponse;
-  return proto.ipc.StartServiceResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StartServiceResponse;
+  return proto.chatlog.StartServiceResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StartServiceResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StartServiceResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StartServiceResponse}
+ * @return {!proto.chatlog.StartServiceResponse}
  */
-proto.ipc.StartServiceResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StartServiceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2300,9 +2344,9 @@ proto.ipc.StartServiceResponse.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StartServiceResponse.prototype.serializeBinary = function() {
+proto.chatlog.StartServiceResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StartServiceResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StartServiceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2310,11 +2354,11 @@ proto.ipc.StartServiceResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StartServiceResponse} message
+ * @param {!proto.chatlog.StartServiceResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartServiceResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StartServiceResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2335,8 +2379,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StopServiceRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StopServiceRequest.toObject(opt_includeInstance, this);
+proto.chatlog.StopServiceRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StopServiceRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2345,11 +2389,11 @@ proto.ipc.StopServiceRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StopServiceRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.StopServiceRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopServiceRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.StopServiceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2365,23 +2409,23 @@ proto.ipc.StopServiceRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StopServiceRequest}
+ * @return {!proto.chatlog.StopServiceRequest}
  */
-proto.ipc.StopServiceRequest.deserializeBinary = function(bytes) {
+proto.chatlog.StopServiceRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StopServiceRequest;
-  return proto.ipc.StopServiceRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StopServiceRequest;
+  return proto.chatlog.StopServiceRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StopServiceRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StopServiceRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StopServiceRequest}
+ * @return {!proto.chatlog.StopServiceRequest}
  */
-proto.ipc.StopServiceRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StopServiceRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2401,9 +2445,9 @@ proto.ipc.StopServiceRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StopServiceRequest.prototype.serializeBinary = function() {
+proto.chatlog.StopServiceRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StopServiceRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StopServiceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2411,11 +2455,11 @@ proto.ipc.StopServiceRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StopServiceRequest} message
+ * @param {!proto.chatlog.StopServiceRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopServiceRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StopServiceRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2436,8 +2480,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StopServiceResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StopServiceResponse.toObject(opt_includeInstance, this);
+proto.chatlog.StopServiceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StopServiceResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2446,11 +2490,11 @@ proto.ipc.StopServiceResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StopServiceResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.StopServiceResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopServiceResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.StopServiceResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2466,23 +2510,23 @@ proto.ipc.StopServiceResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StopServiceResponse}
+ * @return {!proto.chatlog.StopServiceResponse}
  */
-proto.ipc.StopServiceResponse.deserializeBinary = function(bytes) {
+proto.chatlog.StopServiceResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StopServiceResponse;
-  return proto.ipc.StopServiceResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StopServiceResponse;
+  return proto.chatlog.StopServiceResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StopServiceResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StopServiceResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StopServiceResponse}
+ * @return {!proto.chatlog.StopServiceResponse}
  */
-proto.ipc.StopServiceResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StopServiceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2502,9 +2546,9 @@ proto.ipc.StopServiceResponse.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StopServiceResponse.prototype.serializeBinary = function() {
+proto.chatlog.StopServiceResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StopServiceResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StopServiceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2512,11 +2556,11 @@ proto.ipc.StopServiceResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StopServiceResponse} message
+ * @param {!proto.chatlog.StopServiceResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopServiceResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StopServiceResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2537,8 +2581,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SetHTTPAddrRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SetHTTPAddrRequest.toObject(opt_includeInstance, this);
+proto.chatlog.SetHTTPAddrRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SetHTTPAddrRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2547,11 +2591,11 @@ proto.ipc.SetHTTPAddrRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SetHTTPAddrRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.SetHTTPAddrRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetHTTPAddrRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.SetHTTPAddrRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     text: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -2567,23 +2611,23 @@ proto.ipc.SetHTTPAddrRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SetHTTPAddrRequest}
+ * @return {!proto.chatlog.SetHTTPAddrRequest}
  */
-proto.ipc.SetHTTPAddrRequest.deserializeBinary = function(bytes) {
+proto.chatlog.SetHTTPAddrRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SetHTTPAddrRequest;
-  return proto.ipc.SetHTTPAddrRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SetHTTPAddrRequest;
+  return proto.chatlog.SetHTTPAddrRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SetHTTPAddrRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SetHTTPAddrRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SetHTTPAddrRequest}
+ * @return {!proto.chatlog.SetHTTPAddrRequest}
  */
-proto.ipc.SetHTTPAddrRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SetHTTPAddrRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2607,9 +2651,9 @@ proto.ipc.SetHTTPAddrRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SetHTTPAddrRequest.prototype.serializeBinary = function() {
+proto.chatlog.SetHTTPAddrRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SetHTTPAddrRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SetHTTPAddrRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2617,11 +2661,11 @@ proto.ipc.SetHTTPAddrRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SetHTTPAddrRequest} message
+ * @param {!proto.chatlog.SetHTTPAddrRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetHTTPAddrRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SetHTTPAddrRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getText();
   if (f.length > 0) {
@@ -2637,16 +2681,16 @@ proto.ipc.SetHTTPAddrRequest.serializeBinaryToWriter = function(message, writer)
  * optional string text = 1;
  * @return {string}
  */
-proto.ipc.SetHTTPAddrRequest.prototype.getText = function() {
+proto.chatlog.SetHTTPAddrRequest.prototype.getText = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.SetHTTPAddrRequest} returns this
+ * @return {!proto.chatlog.SetHTTPAddrRequest} returns this
  */
-proto.ipc.SetHTTPAddrRequest.prototype.setText = function(value) {
+proto.chatlog.SetHTTPAddrRequest.prototype.setText = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2667,8 +2711,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.SetHTTPAddrResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.SetHTTPAddrResponse.toObject(opt_includeInstance, this);
+proto.chatlog.SetHTTPAddrResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.SetHTTPAddrResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2677,11 +2721,11 @@ proto.ipc.SetHTTPAddrResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.SetHTTPAddrResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.SetHTTPAddrResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetHTTPAddrResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.SetHTTPAddrResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2697,23 +2741,23 @@ proto.ipc.SetHTTPAddrResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.SetHTTPAddrResponse}
+ * @return {!proto.chatlog.SetHTTPAddrResponse}
  */
-proto.ipc.SetHTTPAddrResponse.deserializeBinary = function(bytes) {
+proto.chatlog.SetHTTPAddrResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.SetHTTPAddrResponse;
-  return proto.ipc.SetHTTPAddrResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.SetHTTPAddrResponse;
+  return proto.chatlog.SetHTTPAddrResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.SetHTTPAddrResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.SetHTTPAddrResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.SetHTTPAddrResponse}
+ * @return {!proto.chatlog.SetHTTPAddrResponse}
  */
-proto.ipc.SetHTTPAddrResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.SetHTTPAddrResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2733,9 +2777,9 @@ proto.ipc.SetHTTPAddrResponse.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.SetHTTPAddrResponse.prototype.serializeBinary = function() {
+proto.chatlog.SetHTTPAddrResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.SetHTTPAddrResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.SetHTTPAddrResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2743,11 +2787,11 @@ proto.ipc.SetHTTPAddrResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.SetHTTPAddrResponse} message
+ * @param {!proto.chatlog.SetHTTPAddrResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.SetHTTPAddrResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.SetHTTPAddrResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2768,8 +2812,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetDataKeyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetDataKeyRequest.toObject(opt_includeInstance, this);
+proto.chatlog.GetDataKeyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetDataKeyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2778,11 +2822,11 @@ proto.ipc.GetDataKeyRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetDataKeyRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetDataKeyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetDataKeyRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.GetDataKeyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2798,23 +2842,23 @@ proto.ipc.GetDataKeyRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetDataKeyRequest}
+ * @return {!proto.chatlog.GetDataKeyRequest}
  */
-proto.ipc.GetDataKeyRequest.deserializeBinary = function(bytes) {
+proto.chatlog.GetDataKeyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetDataKeyRequest;
-  return proto.ipc.GetDataKeyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetDataKeyRequest;
+  return proto.chatlog.GetDataKeyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetDataKeyRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetDataKeyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetDataKeyRequest}
+ * @return {!proto.chatlog.GetDataKeyRequest}
  */
-proto.ipc.GetDataKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetDataKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2834,9 +2878,9 @@ proto.ipc.GetDataKeyRequest.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetDataKeyRequest.prototype.serializeBinary = function() {
+proto.chatlog.GetDataKeyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetDataKeyRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetDataKeyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2844,11 +2888,11 @@ proto.ipc.GetDataKeyRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetDataKeyRequest} message
+ * @param {!proto.chatlog.GetDataKeyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetDataKeyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetDataKeyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2869,8 +2913,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetDataKeyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetDataKeyResponse.toObject(opt_includeInstance, this);
+proto.chatlog.GetDataKeyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetDataKeyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2879,11 +2923,11 @@ proto.ipc.GetDataKeyResponse.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetDataKeyResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetDataKeyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetDataKeyResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.GetDataKeyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2899,23 +2943,23 @@ proto.ipc.GetDataKeyResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetDataKeyResponse}
+ * @return {!proto.chatlog.GetDataKeyResponse}
  */
-proto.ipc.GetDataKeyResponse.deserializeBinary = function(bytes) {
+proto.chatlog.GetDataKeyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetDataKeyResponse;
-  return proto.ipc.GetDataKeyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetDataKeyResponse;
+  return proto.chatlog.GetDataKeyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetDataKeyResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetDataKeyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetDataKeyResponse}
+ * @return {!proto.chatlog.GetDataKeyResponse}
  */
-proto.ipc.GetDataKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetDataKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2935,9 +2979,9 @@ proto.ipc.GetDataKeyResponse.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetDataKeyResponse.prototype.serializeBinary = function() {
+proto.chatlog.GetDataKeyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetDataKeyResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetDataKeyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2945,11 +2989,11 @@ proto.ipc.GetDataKeyResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetDataKeyResponse} message
+ * @param {!proto.chatlog.GetDataKeyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetDataKeyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetDataKeyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2970,8 +3014,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.DecryptDBFilesRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.DecryptDBFilesRequest.toObject(opt_includeInstance, this);
+proto.chatlog.DecryptDBFilesRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.DecryptDBFilesRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2980,11 +3024,11 @@ proto.ipc.DecryptDBFilesRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.DecryptDBFilesRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.DecryptDBFilesRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptDBFilesRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.DecryptDBFilesRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3000,23 +3044,23 @@ proto.ipc.DecryptDBFilesRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.DecryptDBFilesRequest}
+ * @return {!proto.chatlog.DecryptDBFilesRequest}
  */
-proto.ipc.DecryptDBFilesRequest.deserializeBinary = function(bytes) {
+proto.chatlog.DecryptDBFilesRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.DecryptDBFilesRequest;
-  return proto.ipc.DecryptDBFilesRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.DecryptDBFilesRequest;
+  return proto.chatlog.DecryptDBFilesRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.DecryptDBFilesRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.DecryptDBFilesRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.DecryptDBFilesRequest}
+ * @return {!proto.chatlog.DecryptDBFilesRequest}
  */
-proto.ipc.DecryptDBFilesRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.DecryptDBFilesRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3036,9 +3080,9 @@ proto.ipc.DecryptDBFilesRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.DecryptDBFilesRequest.prototype.serializeBinary = function() {
+proto.chatlog.DecryptDBFilesRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.DecryptDBFilesRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.DecryptDBFilesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3046,11 +3090,11 @@ proto.ipc.DecryptDBFilesRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.DecryptDBFilesRequest} message
+ * @param {!proto.chatlog.DecryptDBFilesRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptDBFilesRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.DecryptDBFilesRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3071,8 +3115,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.DecryptDBFilesResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.DecryptDBFilesResponse.toObject(opt_includeInstance, this);
+proto.chatlog.DecryptDBFilesResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.DecryptDBFilesResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3081,11 +3125,11 @@ proto.ipc.DecryptDBFilesResponse.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.DecryptDBFilesResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.DecryptDBFilesResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptDBFilesResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.DecryptDBFilesResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3101,23 +3145,23 @@ proto.ipc.DecryptDBFilesResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.DecryptDBFilesResponse}
+ * @return {!proto.chatlog.DecryptDBFilesResponse}
  */
-proto.ipc.DecryptDBFilesResponse.deserializeBinary = function(bytes) {
+proto.chatlog.DecryptDBFilesResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.DecryptDBFilesResponse;
-  return proto.ipc.DecryptDBFilesResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.DecryptDBFilesResponse;
+  return proto.chatlog.DecryptDBFilesResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.DecryptDBFilesResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.DecryptDBFilesResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.DecryptDBFilesResponse}
+ * @return {!proto.chatlog.DecryptDBFilesResponse}
  */
-proto.ipc.DecryptDBFilesResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.DecryptDBFilesResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3137,9 +3181,9 @@ proto.ipc.DecryptDBFilesResponse.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.DecryptDBFilesResponse.prototype.serializeBinary = function() {
+proto.chatlog.DecryptDBFilesResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.DecryptDBFilesResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.DecryptDBFilesResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3147,11 +3191,11 @@ proto.ipc.DecryptDBFilesResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.DecryptDBFilesResponse} message
+ * @param {!proto.chatlog.DecryptDBFilesResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptDBFilesResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.DecryptDBFilesResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3172,8 +3216,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StartAutoDecryptRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StartAutoDecryptRequest.toObject(opt_includeInstance, this);
+proto.chatlog.StartAutoDecryptRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StartAutoDecryptRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3182,11 +3226,11 @@ proto.ipc.StartAutoDecryptRequest.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StartAutoDecryptRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.StartAutoDecryptRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartAutoDecryptRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.StartAutoDecryptRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3202,23 +3246,23 @@ proto.ipc.StartAutoDecryptRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StartAutoDecryptRequest}
+ * @return {!proto.chatlog.StartAutoDecryptRequest}
  */
-proto.ipc.StartAutoDecryptRequest.deserializeBinary = function(bytes) {
+proto.chatlog.StartAutoDecryptRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StartAutoDecryptRequest;
-  return proto.ipc.StartAutoDecryptRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StartAutoDecryptRequest;
+  return proto.chatlog.StartAutoDecryptRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StartAutoDecryptRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StartAutoDecryptRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StartAutoDecryptRequest}
+ * @return {!proto.chatlog.StartAutoDecryptRequest}
  */
-proto.ipc.StartAutoDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StartAutoDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3238,9 +3282,9 @@ proto.ipc.StartAutoDecryptRequest.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StartAutoDecryptRequest.prototype.serializeBinary = function() {
+proto.chatlog.StartAutoDecryptRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StartAutoDecryptRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StartAutoDecryptRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3248,11 +3292,11 @@ proto.ipc.StartAutoDecryptRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StartAutoDecryptRequest} message
+ * @param {!proto.chatlog.StartAutoDecryptRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartAutoDecryptRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StartAutoDecryptRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3273,8 +3317,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StartAutoDecryptResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StartAutoDecryptResponse.toObject(opt_includeInstance, this);
+proto.chatlog.StartAutoDecryptResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StartAutoDecryptResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3283,11 +3327,11 @@ proto.ipc.StartAutoDecryptResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StartAutoDecryptResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.StartAutoDecryptResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartAutoDecryptResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.StartAutoDecryptResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3303,23 +3347,23 @@ proto.ipc.StartAutoDecryptResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StartAutoDecryptResponse}
+ * @return {!proto.chatlog.StartAutoDecryptResponse}
  */
-proto.ipc.StartAutoDecryptResponse.deserializeBinary = function(bytes) {
+proto.chatlog.StartAutoDecryptResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StartAutoDecryptResponse;
-  return proto.ipc.StartAutoDecryptResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StartAutoDecryptResponse;
+  return proto.chatlog.StartAutoDecryptResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StartAutoDecryptResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StartAutoDecryptResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StartAutoDecryptResponse}
+ * @return {!proto.chatlog.StartAutoDecryptResponse}
  */
-proto.ipc.StartAutoDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StartAutoDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3339,9 +3383,9 @@ proto.ipc.StartAutoDecryptResponse.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StartAutoDecryptResponse.prototype.serializeBinary = function() {
+proto.chatlog.StartAutoDecryptResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StartAutoDecryptResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StartAutoDecryptResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3349,11 +3393,11 @@ proto.ipc.StartAutoDecryptResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StartAutoDecryptResponse} message
+ * @param {!proto.chatlog.StartAutoDecryptResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StartAutoDecryptResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StartAutoDecryptResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3374,8 +3418,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StopAutoDecryptRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StopAutoDecryptRequest.toObject(opt_includeInstance, this);
+proto.chatlog.BackupRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.BackupRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3384,11 +3428,301 @@ proto.ipc.StopAutoDecryptRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StopAutoDecryptRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.BackupRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopAutoDecryptRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.BackupRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    dbType: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    dbPath: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.chatlog.BackupRequest}
+ */
+proto.chatlog.BackupRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.chatlog.BackupRequest;
+  return proto.chatlog.BackupRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.chatlog.BackupRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.chatlog.BackupRequest}
+ */
+proto.chatlog.BackupRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDbType(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDbPath(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.chatlog.BackupRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.chatlog.BackupRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.chatlog.BackupRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.chatlog.BackupRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDbType();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDbPath();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string db_type = 1;
+ * @return {string}
+ */
+proto.chatlog.BackupRequest.prototype.getDbType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.chatlog.BackupRequest} returns this
+ */
+proto.chatlog.BackupRequest.prototype.setDbType = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string db_path = 2;
+ * @return {string}
+ */
+proto.chatlog.BackupRequest.prototype.getDbPath = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.chatlog.BackupRequest} returns this
+ */
+proto.chatlog.BackupRequest.prototype.setDbPath = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.chatlog.BackupResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.BackupResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.chatlog.BackupResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.chatlog.BackupResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    message: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.chatlog.BackupResponse}
+ */
+proto.chatlog.BackupResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.chatlog.BackupResponse;
+  return proto.chatlog.BackupResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.chatlog.BackupResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.chatlog.BackupResponse}
+ */
+proto.chatlog.BackupResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.chatlog.BackupResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.chatlog.BackupResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.chatlog.BackupResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.chatlog.BackupResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string message = 1;
+ * @return {string}
+ */
+proto.chatlog.BackupResponse.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.chatlog.BackupResponse} returns this
+ */
+proto.chatlog.BackupResponse.prototype.setMessage = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.chatlog.StopAutoDecryptRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StopAutoDecryptRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.chatlog.StopAutoDecryptRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.chatlog.StopAutoDecryptRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3404,23 +3738,23 @@ proto.ipc.StopAutoDecryptRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StopAutoDecryptRequest}
+ * @return {!proto.chatlog.StopAutoDecryptRequest}
  */
-proto.ipc.StopAutoDecryptRequest.deserializeBinary = function(bytes) {
+proto.chatlog.StopAutoDecryptRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StopAutoDecryptRequest;
-  return proto.ipc.StopAutoDecryptRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StopAutoDecryptRequest;
+  return proto.chatlog.StopAutoDecryptRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StopAutoDecryptRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StopAutoDecryptRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StopAutoDecryptRequest}
+ * @return {!proto.chatlog.StopAutoDecryptRequest}
  */
-proto.ipc.StopAutoDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StopAutoDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3440,9 +3774,9 @@ proto.ipc.StopAutoDecryptRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StopAutoDecryptRequest.prototype.serializeBinary = function() {
+proto.chatlog.StopAutoDecryptRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StopAutoDecryptRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StopAutoDecryptRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3450,11 +3784,11 @@ proto.ipc.StopAutoDecryptRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StopAutoDecryptRequest} message
+ * @param {!proto.chatlog.StopAutoDecryptRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopAutoDecryptRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StopAutoDecryptRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3475,8 +3809,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.StopAutoDecryptResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.StopAutoDecryptResponse.toObject(opt_includeInstance, this);
+proto.chatlog.StopAutoDecryptResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.StopAutoDecryptResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3485,11 +3819,11 @@ proto.ipc.StopAutoDecryptResponse.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.StopAutoDecryptResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.StopAutoDecryptResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopAutoDecryptResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.StopAutoDecryptResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3505,23 +3839,23 @@ proto.ipc.StopAutoDecryptResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.StopAutoDecryptResponse}
+ * @return {!proto.chatlog.StopAutoDecryptResponse}
  */
-proto.ipc.StopAutoDecryptResponse.deserializeBinary = function(bytes) {
+proto.chatlog.StopAutoDecryptResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.StopAutoDecryptResponse;
-  return proto.ipc.StopAutoDecryptResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.StopAutoDecryptResponse;
+  return proto.chatlog.StopAutoDecryptResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.StopAutoDecryptResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.StopAutoDecryptResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.StopAutoDecryptResponse}
+ * @return {!proto.chatlog.StopAutoDecryptResponse}
  */
-proto.ipc.StopAutoDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.StopAutoDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3541,9 +3875,9 @@ proto.ipc.StopAutoDecryptResponse.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.StopAutoDecryptResponse.prototype.serializeBinary = function() {
+proto.chatlog.StopAutoDecryptResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.StopAutoDecryptResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.StopAutoDecryptResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3551,11 +3885,11 @@ proto.ipc.StopAutoDecryptResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.StopAutoDecryptResponse} message
+ * @param {!proto.chatlog.StopAutoDecryptResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.StopAutoDecryptResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.StopAutoDecryptResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3576,8 +3910,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.RefreshSessionRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.RefreshSessionRequest.toObject(opt_includeInstance, this);
+proto.chatlog.RefreshSessionRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.RefreshSessionRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3586,11 +3920,11 @@ proto.ipc.RefreshSessionRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.RefreshSessionRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.RefreshSessionRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RefreshSessionRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.RefreshSessionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3606,23 +3940,23 @@ proto.ipc.RefreshSessionRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.RefreshSessionRequest}
+ * @return {!proto.chatlog.RefreshSessionRequest}
  */
-proto.ipc.RefreshSessionRequest.deserializeBinary = function(bytes) {
+proto.chatlog.RefreshSessionRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.RefreshSessionRequest;
-  return proto.ipc.RefreshSessionRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.RefreshSessionRequest;
+  return proto.chatlog.RefreshSessionRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.RefreshSessionRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.RefreshSessionRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.RefreshSessionRequest}
+ * @return {!proto.chatlog.RefreshSessionRequest}
  */
-proto.ipc.RefreshSessionRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.RefreshSessionRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3642,9 +3976,9 @@ proto.ipc.RefreshSessionRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.RefreshSessionRequest.prototype.serializeBinary = function() {
+proto.chatlog.RefreshSessionRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.RefreshSessionRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.RefreshSessionRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3652,11 +3986,11 @@ proto.ipc.RefreshSessionRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.RefreshSessionRequest} message
+ * @param {!proto.chatlog.RefreshSessionRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RefreshSessionRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.RefreshSessionRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3677,8 +4011,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.RefreshSessionResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.RefreshSessionResponse.toObject(opt_includeInstance, this);
+proto.chatlog.RefreshSessionResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.RefreshSessionResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3687,11 +4021,11 @@ proto.ipc.RefreshSessionResponse.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.RefreshSessionResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.RefreshSessionResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RefreshSessionResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.RefreshSessionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3707,23 +4041,23 @@ proto.ipc.RefreshSessionResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.RefreshSessionResponse}
+ * @return {!proto.chatlog.RefreshSessionResponse}
  */
-proto.ipc.RefreshSessionResponse.deserializeBinary = function(bytes) {
+proto.chatlog.RefreshSessionResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.RefreshSessionResponse;
-  return proto.ipc.RefreshSessionResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.RefreshSessionResponse;
+  return proto.chatlog.RefreshSessionResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.RefreshSessionResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.RefreshSessionResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.RefreshSessionResponse}
+ * @return {!proto.chatlog.RefreshSessionResponse}
  */
-proto.ipc.RefreshSessionResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.RefreshSessionResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3743,9 +4077,9 @@ proto.ipc.RefreshSessionResponse.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.RefreshSessionResponse.prototype.serializeBinary = function() {
+proto.chatlog.RefreshSessionResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.RefreshSessionResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.RefreshSessionResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3753,11 +4087,11 @@ proto.ipc.RefreshSessionResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.RefreshSessionResponse} message
+ * @param {!proto.chatlog.RefreshSessionResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.RefreshSessionResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.RefreshSessionResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3778,8 +4112,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandKeyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandKeyRequest.toObject(opt_includeInstance, this);
+proto.chatlog.CommandKeyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandKeyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3788,11 +4122,11 @@ proto.ipc.CommandKeyRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandKeyRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandKeyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandKeyRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandKeyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     pid: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -3811,23 +4145,23 @@ proto.ipc.CommandKeyRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandKeyRequest}
+ * @return {!proto.chatlog.CommandKeyRequest}
  */
-proto.ipc.CommandKeyRequest.deserializeBinary = function(bytes) {
+proto.chatlog.CommandKeyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandKeyRequest;
-  return proto.ipc.CommandKeyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandKeyRequest;
+  return proto.chatlog.CommandKeyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandKeyRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandKeyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandKeyRequest}
+ * @return {!proto.chatlog.CommandKeyRequest}
  */
-proto.ipc.CommandKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3863,9 +4197,9 @@ proto.ipc.CommandKeyRequest.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandKeyRequest.prototype.serializeBinary = function() {
+proto.chatlog.CommandKeyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandKeyRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandKeyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3873,11 +4207,11 @@ proto.ipc.CommandKeyRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandKeyRequest} message
+ * @param {!proto.chatlog.CommandKeyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandKeyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandKeyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -3914,16 +4248,16 @@ proto.ipc.CommandKeyRequest.serializeBinaryToWriter = function(message, writer) 
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.CommandKeyRequest.prototype.getConfigPath = function() {
+proto.chatlog.CommandKeyRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.CommandKeyRequest} returns this
+ * @return {!proto.chatlog.CommandKeyRequest} returns this
  */
-proto.ipc.CommandKeyRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.CommandKeyRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3932,16 +4266,16 @@ proto.ipc.CommandKeyRequest.prototype.setConfigPath = function(value) {
  * optional int32 pid = 2;
  * @return {number}
  */
-proto.ipc.CommandKeyRequest.prototype.getPid = function() {
+proto.chatlog.CommandKeyRequest.prototype.getPid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ipc.CommandKeyRequest} returns this
+ * @return {!proto.chatlog.CommandKeyRequest} returns this
  */
-proto.ipc.CommandKeyRequest.prototype.setPid = function(value) {
+proto.chatlog.CommandKeyRequest.prototype.setPid = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -3950,16 +4284,16 @@ proto.ipc.CommandKeyRequest.prototype.setPid = function(value) {
  * optional bool force = 3;
  * @return {boolean}
  */
-proto.ipc.CommandKeyRequest.prototype.getForce = function() {
+proto.chatlog.CommandKeyRequest.prototype.getForce = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.ipc.CommandKeyRequest} returns this
+ * @return {!proto.chatlog.CommandKeyRequest} returns this
  */
-proto.ipc.CommandKeyRequest.prototype.setForce = function(value) {
+proto.chatlog.CommandKeyRequest.prototype.setForce = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
@@ -3968,16 +4302,16 @@ proto.ipc.CommandKeyRequest.prototype.setForce = function(value) {
  * optional bool show_xor_key = 4;
  * @return {boolean}
  */
-proto.ipc.CommandKeyRequest.prototype.getShowXorKey = function() {
+proto.chatlog.CommandKeyRequest.prototype.getShowXorKey = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.ipc.CommandKeyRequest} returns this
+ * @return {!proto.chatlog.CommandKeyRequest} returns this
  */
-proto.ipc.CommandKeyRequest.prototype.setShowXorKey = function(value) {
+proto.chatlog.CommandKeyRequest.prototype.setShowXorKey = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
@@ -3998,8 +4332,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandKeyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandKeyResponse.toObject(opt_includeInstance, this);
+proto.chatlog.CommandKeyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandKeyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4008,11 +4342,11 @@ proto.ipc.CommandKeyResponse.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandKeyResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandKeyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandKeyResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandKeyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     result: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -4028,23 +4362,23 @@ proto.ipc.CommandKeyResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandKeyResponse}
+ * @return {!proto.chatlog.CommandKeyResponse}
  */
-proto.ipc.CommandKeyResponse.deserializeBinary = function(bytes) {
+proto.chatlog.CommandKeyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandKeyResponse;
-  return proto.ipc.CommandKeyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandKeyResponse;
+  return proto.chatlog.CommandKeyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandKeyResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandKeyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandKeyResponse}
+ * @return {!proto.chatlog.CommandKeyResponse}
  */
-proto.ipc.CommandKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4068,9 +4402,9 @@ proto.ipc.CommandKeyResponse.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandKeyResponse.prototype.serializeBinary = function() {
+proto.chatlog.CommandKeyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandKeyResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandKeyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4078,11 +4412,11 @@ proto.ipc.CommandKeyResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandKeyResponse} message
+ * @param {!proto.chatlog.CommandKeyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandKeyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandKeyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getResult();
   if (f.length > 0) {
@@ -4098,16 +4432,16 @@ proto.ipc.CommandKeyResponse.serializeBinaryToWriter = function(message, writer)
  * optional string result = 1;
  * @return {string}
  */
-proto.ipc.CommandKeyResponse.prototype.getResult = function() {
+proto.chatlog.CommandKeyResponse.prototype.getResult = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.CommandKeyResponse} returns this
+ * @return {!proto.chatlog.CommandKeyResponse} returns this
  */
-proto.ipc.CommandKeyResponse.prototype.setResult = function(value) {
+proto.chatlog.CommandKeyResponse.prototype.setResult = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4128,8 +4462,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandDecryptRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandDecryptRequest.toObject(opt_includeInstance, this);
+proto.chatlog.CommandDecryptRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandDecryptRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4138,11 +4472,11 @@ proto.ipc.CommandDecryptRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandDecryptRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandDecryptRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandDecryptRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandDecryptRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     cmdConfMap: (f = msg.getCmdConfMap()) ? f.toObject(includeInstance, undefined) : []
@@ -4159,23 +4493,23 @@ proto.ipc.CommandDecryptRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandDecryptRequest}
+ * @return {!proto.chatlog.CommandDecryptRequest}
  */
-proto.ipc.CommandDecryptRequest.deserializeBinary = function(bytes) {
+proto.chatlog.CommandDecryptRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandDecryptRequest;
-  return proto.ipc.CommandDecryptRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandDecryptRequest;
+  return proto.chatlog.CommandDecryptRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandDecryptRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandDecryptRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandDecryptRequest}
+ * @return {!proto.chatlog.CommandDecryptRequest}
  */
-proto.ipc.CommandDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandDecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4205,9 +4539,9 @@ proto.ipc.CommandDecryptRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandDecryptRequest.prototype.serializeBinary = function() {
+proto.chatlog.CommandDecryptRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandDecryptRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandDecryptRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4215,11 +4549,11 @@ proto.ipc.CommandDecryptRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandDecryptRequest} message
+ * @param {!proto.chatlog.CommandDecryptRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandDecryptRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandDecryptRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -4239,16 +4573,16 @@ proto.ipc.CommandDecryptRequest.serializeBinaryToWriter = function(message, writ
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.CommandDecryptRequest.prototype.getConfigPath = function() {
+proto.chatlog.CommandDecryptRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.CommandDecryptRequest} returns this
+ * @return {!proto.chatlog.CommandDecryptRequest} returns this
  */
-proto.ipc.CommandDecryptRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.CommandDecryptRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4259,7 +4593,7 @@ proto.ipc.CommandDecryptRequest.prototype.setConfigPath = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.ipc.CommandDecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
+proto.chatlog.CommandDecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
       null));
@@ -4268,9 +4602,9 @@ proto.ipc.CommandDecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCre
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.ipc.CommandDecryptRequest} returns this
+ * @return {!proto.chatlog.CommandDecryptRequest} returns this
  */
-proto.ipc.CommandDecryptRequest.prototype.clearCmdConfMap = function() {
+proto.chatlog.CommandDecryptRequest.prototype.clearCmdConfMap = function() {
   this.getCmdConfMap().clear();
   return this;};
 
@@ -4291,8 +4625,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandDecryptResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandDecryptResponse.toObject(opt_includeInstance, this);
+proto.chatlog.CommandDecryptResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandDecryptResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4301,11 +4635,11 @@ proto.ipc.CommandDecryptResponse.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandDecryptResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandDecryptResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandDecryptResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandDecryptResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -4321,23 +4655,23 @@ proto.ipc.CommandDecryptResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandDecryptResponse}
+ * @return {!proto.chatlog.CommandDecryptResponse}
  */
-proto.ipc.CommandDecryptResponse.deserializeBinary = function(bytes) {
+proto.chatlog.CommandDecryptResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandDecryptResponse;
-  return proto.ipc.CommandDecryptResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandDecryptResponse;
+  return proto.chatlog.CommandDecryptResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandDecryptResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandDecryptResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandDecryptResponse}
+ * @return {!proto.chatlog.CommandDecryptResponse}
  */
-proto.ipc.CommandDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandDecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4357,9 +4691,9 @@ proto.ipc.CommandDecryptResponse.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandDecryptResponse.prototype.serializeBinary = function() {
+proto.chatlog.CommandDecryptResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandDecryptResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandDecryptResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4367,11 +4701,11 @@ proto.ipc.CommandDecryptResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandDecryptResponse} message
+ * @param {!proto.chatlog.CommandDecryptResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandDecryptResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandDecryptResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -4392,8 +4726,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandHTTPServerRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandHTTPServerRequest.toObject(opt_includeInstance, this);
+proto.chatlog.CommandHTTPServerRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandHTTPServerRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4402,11 +4736,11 @@ proto.ipc.CommandHTTPServerRequest.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandHTTPServerRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandHTTPServerRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandHTTPServerRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandHTTPServerRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     cmdConfMap: (f = msg.getCmdConfMap()) ? f.toObject(includeInstance, undefined) : []
@@ -4423,23 +4757,23 @@ proto.ipc.CommandHTTPServerRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandHTTPServerRequest}
+ * @return {!proto.chatlog.CommandHTTPServerRequest}
  */
-proto.ipc.CommandHTTPServerRequest.deserializeBinary = function(bytes) {
+proto.chatlog.CommandHTTPServerRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandHTTPServerRequest;
-  return proto.ipc.CommandHTTPServerRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandHTTPServerRequest;
+  return proto.chatlog.CommandHTTPServerRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandHTTPServerRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandHTTPServerRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandHTTPServerRequest}
+ * @return {!proto.chatlog.CommandHTTPServerRequest}
  */
-proto.ipc.CommandHTTPServerRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandHTTPServerRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4469,9 +4803,9 @@ proto.ipc.CommandHTTPServerRequest.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandHTTPServerRequest.prototype.serializeBinary = function() {
+proto.chatlog.CommandHTTPServerRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandHTTPServerRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandHTTPServerRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4479,11 +4813,11 @@ proto.ipc.CommandHTTPServerRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandHTTPServerRequest} message
+ * @param {!proto.chatlog.CommandHTTPServerRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandHTTPServerRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandHTTPServerRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -4503,16 +4837,16 @@ proto.ipc.CommandHTTPServerRequest.serializeBinaryToWriter = function(message, w
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.CommandHTTPServerRequest.prototype.getConfigPath = function() {
+proto.chatlog.CommandHTTPServerRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.CommandHTTPServerRequest} returns this
+ * @return {!proto.chatlog.CommandHTTPServerRequest} returns this
  */
-proto.ipc.CommandHTTPServerRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.CommandHTTPServerRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4523,7 +4857,7 @@ proto.ipc.CommandHTTPServerRequest.prototype.setConfigPath = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.ipc.CommandHTTPServerRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
+proto.chatlog.CommandHTTPServerRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
       null));
@@ -4532,9 +4866,9 @@ proto.ipc.CommandHTTPServerRequest.prototype.getCmdConfMap = function(opt_noLazy
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.ipc.CommandHTTPServerRequest} returns this
+ * @return {!proto.chatlog.CommandHTTPServerRequest} returns this
  */
-proto.ipc.CommandHTTPServerRequest.prototype.clearCmdConfMap = function() {
+proto.chatlog.CommandHTTPServerRequest.prototype.clearCmdConfMap = function() {
   this.getCmdConfMap().clear();
   return this;};
 
@@ -4555,8 +4889,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.CommandHTTPServerResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.CommandHTTPServerResponse.toObject(opt_includeInstance, this);
+proto.chatlog.CommandHTTPServerResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.CommandHTTPServerResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4565,11 +4899,11 @@ proto.ipc.CommandHTTPServerResponse.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.CommandHTTPServerResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.CommandHTTPServerResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandHTTPServerResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.CommandHTTPServerResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -4585,23 +4919,23 @@ proto.ipc.CommandHTTPServerResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.CommandHTTPServerResponse}
+ * @return {!proto.chatlog.CommandHTTPServerResponse}
  */
-proto.ipc.CommandHTTPServerResponse.deserializeBinary = function(bytes) {
+proto.chatlog.CommandHTTPServerResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.CommandHTTPServerResponse;
-  return proto.ipc.CommandHTTPServerResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.CommandHTTPServerResponse;
+  return proto.chatlog.CommandHTTPServerResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.CommandHTTPServerResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.CommandHTTPServerResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.CommandHTTPServerResponse}
+ * @return {!proto.chatlog.CommandHTTPServerResponse}
  */
-proto.ipc.CommandHTTPServerResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.CommandHTTPServerResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4621,9 +4955,9 @@ proto.ipc.CommandHTTPServerResponse.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.CommandHTTPServerResponse.prototype.serializeBinary = function() {
+proto.chatlog.CommandHTTPServerResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.CommandHTTPServerResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.CommandHTTPServerResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4631,11 +4965,11 @@ proto.ipc.CommandHTTPServerResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.CommandHTTPServerResponse} message
+ * @param {!proto.chatlog.CommandHTTPServerResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.CommandHTTPServerResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.CommandHTTPServerResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -4656,8 +4990,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetWeChatInstancesRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetWeChatInstancesRequest.toObject(opt_includeInstance, this);
+proto.chatlog.GetWeChatInstancesRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetWeChatInstancesRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4666,11 +5000,11 @@ proto.ipc.GetWeChatInstancesRequest.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetWeChatInstancesRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetWeChatInstancesRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetWeChatInstancesRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.GetWeChatInstancesRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -4686,23 +5020,23 @@ proto.ipc.GetWeChatInstancesRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetWeChatInstancesRequest}
+ * @return {!proto.chatlog.GetWeChatInstancesRequest}
  */
-proto.ipc.GetWeChatInstancesRequest.deserializeBinary = function(bytes) {
+proto.chatlog.GetWeChatInstancesRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetWeChatInstancesRequest;
-  return proto.ipc.GetWeChatInstancesRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetWeChatInstancesRequest;
+  return proto.chatlog.GetWeChatInstancesRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetWeChatInstancesRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetWeChatInstancesRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetWeChatInstancesRequest}
+ * @return {!proto.chatlog.GetWeChatInstancesRequest}
  */
-proto.ipc.GetWeChatInstancesRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetWeChatInstancesRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4722,9 +5056,9 @@ proto.ipc.GetWeChatInstancesRequest.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetWeChatInstancesRequest.prototype.serializeBinary = function() {
+proto.chatlog.GetWeChatInstancesRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetWeChatInstancesRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetWeChatInstancesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4732,11 +5066,11 @@ proto.ipc.GetWeChatInstancesRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetWeChatInstancesRequest} message
+ * @param {!proto.chatlog.GetWeChatInstancesRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetWeChatInstancesRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetWeChatInstancesRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -4747,7 +5081,7 @@ proto.ipc.GetWeChatInstancesRequest.serializeBinaryToWriter = function(message, 
  * @private {!Array<number>}
  * @const
  */
-proto.ipc.GetWeChatInstancesResponse.repeatedFields_ = [1];
+proto.chatlog.GetWeChatInstancesResponse.repeatedFields_ = [1];
 
 
 
@@ -4764,8 +5098,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetWeChatInstancesResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetWeChatInstancesResponse.toObject(opt_includeInstance, this);
+proto.chatlog.GetWeChatInstancesResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetWeChatInstancesResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4774,14 +5108,14 @@ proto.ipc.GetWeChatInstancesResponse.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetWeChatInstancesResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetWeChatInstancesResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetWeChatInstancesResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.GetWeChatInstancesResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     accountsList: jspb.Message.toObjectList(msg.getAccountsList(),
-    proto.ipc.Account.toObject, includeInstance)
+    proto.chatlog.Account.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -4795,23 +5129,23 @@ proto.ipc.GetWeChatInstancesResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetWeChatInstancesResponse}
+ * @return {!proto.chatlog.GetWeChatInstancesResponse}
  */
-proto.ipc.GetWeChatInstancesResponse.deserializeBinary = function(bytes) {
+proto.chatlog.GetWeChatInstancesResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetWeChatInstancesResponse;
-  return proto.ipc.GetWeChatInstancesResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetWeChatInstancesResponse;
+  return proto.chatlog.GetWeChatInstancesResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetWeChatInstancesResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetWeChatInstancesResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetWeChatInstancesResponse}
+ * @return {!proto.chatlog.GetWeChatInstancesResponse}
  */
-proto.ipc.GetWeChatInstancesResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetWeChatInstancesResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4819,8 +5153,8 @@ proto.ipc.GetWeChatInstancesResponse.deserializeBinaryFromReader = function(msg,
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ipc.Account;
-      reader.readMessage(value,proto.ipc.Account.deserializeBinaryFromReader);
+      var value = new proto.chatlog.Account;
+      reader.readMessage(value,proto.chatlog.Account.deserializeBinaryFromReader);
       msg.addAccounts(value);
       break;
     default:
@@ -4836,9 +5170,9 @@ proto.ipc.GetWeChatInstancesResponse.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetWeChatInstancesResponse.prototype.serializeBinary = function() {
+proto.chatlog.GetWeChatInstancesResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetWeChatInstancesResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetWeChatInstancesResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4846,18 +5180,18 @@ proto.ipc.GetWeChatInstancesResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetWeChatInstancesResponse} message
+ * @param {!proto.chatlog.GetWeChatInstancesResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetWeChatInstancesResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetWeChatInstancesResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccountsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.ipc.Account.serializeBinaryToWriter
+      proto.chatlog.Account.serializeBinaryToWriter
     );
   }
 };
@@ -4865,38 +5199,38 @@ proto.ipc.GetWeChatInstancesResponse.serializeBinaryToWriter = function(message,
 
 /**
  * repeated Account accounts = 1;
- * @return {!Array<!proto.ipc.Account>}
+ * @return {!Array<!proto.chatlog.Account>}
  */
-proto.ipc.GetWeChatInstancesResponse.prototype.getAccountsList = function() {
-  return /** @type{!Array<!proto.ipc.Account>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ipc.Account, 1));
+proto.chatlog.GetWeChatInstancesResponse.prototype.getAccountsList = function() {
+  return /** @type{!Array<!proto.chatlog.Account>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.chatlog.Account, 1));
 };
 
 
 /**
- * @param {!Array<!proto.ipc.Account>} value
- * @return {!proto.ipc.GetWeChatInstancesResponse} returns this
+ * @param {!Array<!proto.chatlog.Account>} value
+ * @return {!proto.chatlog.GetWeChatInstancesResponse} returns this
 */
-proto.ipc.GetWeChatInstancesResponse.prototype.setAccountsList = function(value) {
+proto.chatlog.GetWeChatInstancesResponse.prototype.setAccountsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.ipc.Account=} opt_value
+ * @param {!proto.chatlog.Account=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ipc.Account}
+ * @return {!proto.chatlog.Account}
  */
-proto.ipc.GetWeChatInstancesResponse.prototype.addAccounts = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ipc.Account, opt_index);
+proto.chatlog.GetWeChatInstancesResponse.prototype.addAccounts = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.chatlog.Account, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.ipc.GetWeChatInstancesResponse} returns this
+ * @return {!proto.chatlog.GetWeChatInstancesResponse} returns this
  */
-proto.ipc.GetWeChatInstancesResponse.prototype.clearAccountsList = function() {
+proto.chatlog.GetWeChatInstancesResponse.prototype.clearAccountsList = function() {
   return this.setAccountsList([]);
 };
 
@@ -4917,8 +5251,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetKeyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetKeyRequest.toObject(opt_includeInstance, this);
+proto.chatlog.GetKeyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetKeyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4927,11 +5261,11 @@ proto.ipc.GetKeyRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetKeyRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetKeyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetKeyRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.GetKeyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     pid: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -4950,23 +5284,23 @@ proto.ipc.GetKeyRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetKeyRequest}
+ * @return {!proto.chatlog.GetKeyRequest}
  */
-proto.ipc.GetKeyRequest.deserializeBinary = function(bytes) {
+proto.chatlog.GetKeyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetKeyRequest;
-  return proto.ipc.GetKeyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetKeyRequest;
+  return proto.chatlog.GetKeyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetKeyRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetKeyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetKeyRequest}
+ * @return {!proto.chatlog.GetKeyRequest}
  */
-proto.ipc.GetKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5002,9 +5336,9 @@ proto.ipc.GetKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetKeyRequest.prototype.serializeBinary = function() {
+proto.chatlog.GetKeyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetKeyRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetKeyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5012,11 +5346,11 @@ proto.ipc.GetKeyRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetKeyRequest} message
+ * @param {!proto.chatlog.GetKeyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetKeyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetKeyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -5053,16 +5387,16 @@ proto.ipc.GetKeyRequest.serializeBinaryToWriter = function(message, writer) {
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.GetKeyRequest.prototype.getConfigPath = function() {
+proto.chatlog.GetKeyRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.GetKeyRequest} returns this
+ * @return {!proto.chatlog.GetKeyRequest} returns this
  */
-proto.ipc.GetKeyRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.GetKeyRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5071,16 +5405,16 @@ proto.ipc.GetKeyRequest.prototype.setConfigPath = function(value) {
  * optional int32 pid = 2;
  * @return {number}
  */
-proto.ipc.GetKeyRequest.prototype.getPid = function() {
+proto.chatlog.GetKeyRequest.prototype.getPid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ipc.GetKeyRequest} returns this
+ * @return {!proto.chatlog.GetKeyRequest} returns this
  */
-proto.ipc.GetKeyRequest.prototype.setPid = function(value) {
+proto.chatlog.GetKeyRequest.prototype.setPid = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -5089,16 +5423,16 @@ proto.ipc.GetKeyRequest.prototype.setPid = function(value) {
  * optional bool force = 3;
  * @return {boolean}
  */
-proto.ipc.GetKeyRequest.prototype.getForce = function() {
+proto.chatlog.GetKeyRequest.prototype.getForce = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.ipc.GetKeyRequest} returns this
+ * @return {!proto.chatlog.GetKeyRequest} returns this
  */
-proto.ipc.GetKeyRequest.prototype.setForce = function(value) {
+proto.chatlog.GetKeyRequest.prototype.setForce = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
@@ -5107,16 +5441,16 @@ proto.ipc.GetKeyRequest.prototype.setForce = function(value) {
  * optional bool show_xor_key = 4;
  * @return {boolean}
  */
-proto.ipc.GetKeyRequest.prototype.getShowXorKey = function() {
+proto.chatlog.GetKeyRequest.prototype.getShowXorKey = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.ipc.GetKeyRequest} returns this
+ * @return {!proto.chatlog.GetKeyRequest} returns this
  */
-proto.ipc.GetKeyRequest.prototype.setShowXorKey = function(value) {
+proto.chatlog.GetKeyRequest.prototype.setShowXorKey = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
@@ -5137,8 +5471,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.GetKeyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.GetKeyResponse.toObject(opt_includeInstance, this);
+proto.chatlog.GetKeyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.GetKeyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5147,13 +5481,13 @@ proto.ipc.GetKeyResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.GetKeyResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.GetKeyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetKeyResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.GetKeyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    data: (f = msg.getData()) && proto.ipc.KeyData.toObject(includeInstance, f)
+    data: (f = msg.getData()) && proto.chatlog.KeyData.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5167,23 +5501,23 @@ proto.ipc.GetKeyResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.GetKeyResponse}
+ * @return {!proto.chatlog.GetKeyResponse}
  */
-proto.ipc.GetKeyResponse.deserializeBinary = function(bytes) {
+proto.chatlog.GetKeyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.GetKeyResponse;
-  return proto.ipc.GetKeyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.GetKeyResponse;
+  return proto.chatlog.GetKeyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.GetKeyResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.GetKeyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.GetKeyResponse}
+ * @return {!proto.chatlog.GetKeyResponse}
  */
-proto.ipc.GetKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.GetKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5191,8 +5525,8 @@ proto.ipc.GetKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ipc.KeyData;
-      reader.readMessage(value,proto.ipc.KeyData.deserializeBinaryFromReader);
+      var value = new proto.chatlog.KeyData;
+      reader.readMessage(value,proto.chatlog.KeyData.deserializeBinaryFromReader);
       msg.setData(value);
       break;
     default:
@@ -5208,9 +5542,9 @@ proto.ipc.GetKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.GetKeyResponse.prototype.serializeBinary = function() {
+proto.chatlog.GetKeyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.GetKeyResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.GetKeyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5218,18 +5552,18 @@ proto.ipc.GetKeyResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.GetKeyResponse} message
+ * @param {!proto.chatlog.GetKeyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.GetKeyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.GetKeyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getData();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ipc.KeyData.serializeBinaryToWriter
+      proto.chatlog.KeyData.serializeBinaryToWriter
     );
   }
 };
@@ -5237,28 +5571,28 @@ proto.ipc.GetKeyResponse.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * optional KeyData data = 1;
- * @return {?proto.ipc.KeyData}
+ * @return {?proto.chatlog.KeyData}
  */
-proto.ipc.GetKeyResponse.prototype.getData = function() {
-  return /** @type{?proto.ipc.KeyData} */ (
-    jspb.Message.getWrapperField(this, proto.ipc.KeyData, 1));
+proto.chatlog.GetKeyResponse.prototype.getData = function() {
+  return /** @type{?proto.chatlog.KeyData} */ (
+    jspb.Message.getWrapperField(this, proto.chatlog.KeyData, 1));
 };
 
 
 /**
- * @param {?proto.ipc.KeyData|undefined} value
- * @return {!proto.ipc.GetKeyResponse} returns this
+ * @param {?proto.chatlog.KeyData|undefined} value
+ * @return {!proto.chatlog.GetKeyResponse} returns this
 */
-proto.ipc.GetKeyResponse.prototype.setData = function(value) {
+proto.chatlog.GetKeyResponse.prototype.setData = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ipc.GetKeyResponse} returns this
+ * @return {!proto.chatlog.GetKeyResponse} returns this
  */
-proto.ipc.GetKeyResponse.prototype.clearData = function() {
+proto.chatlog.GetKeyResponse.prototype.clearData = function() {
   return this.setData(undefined);
 };
 
@@ -5267,7 +5601,7 @@ proto.ipc.GetKeyResponse.prototype.clearData = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ipc.GetKeyResponse.prototype.hasData = function() {
+proto.chatlog.GetKeyResponse.prototype.hasData = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -5288,8 +5622,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.DecryptRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.DecryptRequest.toObject(opt_includeInstance, this);
+proto.chatlog.DecryptRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.DecryptRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5298,11 +5632,11 @@ proto.ipc.DecryptRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.DecryptRequest} msg The msg instance to transform.
+ * @param {!proto.chatlog.DecryptRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptRequest.toObject = function(includeInstance, msg) {
+proto.chatlog.DecryptRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     configPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     cmdConfMap: (f = msg.getCmdConfMap()) ? f.toObject(includeInstance, undefined) : []
@@ -5319,23 +5653,23 @@ proto.ipc.DecryptRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.DecryptRequest}
+ * @return {!proto.chatlog.DecryptRequest}
  */
-proto.ipc.DecryptRequest.deserializeBinary = function(bytes) {
+proto.chatlog.DecryptRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.DecryptRequest;
-  return proto.ipc.DecryptRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.DecryptRequest;
+  return proto.chatlog.DecryptRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.DecryptRequest} msg The message object to deserialize into.
+ * @param {!proto.chatlog.DecryptRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.DecryptRequest}
+ * @return {!proto.chatlog.DecryptRequest}
  */
-proto.ipc.DecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.DecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5365,9 +5699,9 @@ proto.ipc.DecryptRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.DecryptRequest.prototype.serializeBinary = function() {
+proto.chatlog.DecryptRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.DecryptRequest.serializeBinaryToWriter(this, writer);
+  proto.chatlog.DecryptRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5375,11 +5709,11 @@ proto.ipc.DecryptRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.DecryptRequest} message
+ * @param {!proto.chatlog.DecryptRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptRequest.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.DecryptRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getConfigPath();
   if (f.length > 0) {
@@ -5399,16 +5733,16 @@ proto.ipc.DecryptRequest.serializeBinaryToWriter = function(message, writer) {
  * optional string config_path = 1;
  * @return {string}
  */
-proto.ipc.DecryptRequest.prototype.getConfigPath = function() {
+proto.chatlog.DecryptRequest.prototype.getConfigPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ipc.DecryptRequest} returns this
+ * @return {!proto.chatlog.DecryptRequest} returns this
  */
-proto.ipc.DecryptRequest.prototype.setConfigPath = function(value) {
+proto.chatlog.DecryptRequest.prototype.setConfigPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5419,7 +5753,7 @@ proto.ipc.DecryptRequest.prototype.setConfigPath = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.ipc.DecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
+proto.chatlog.DecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
       null));
@@ -5428,9 +5762,9 @@ proto.ipc.DecryptRequest.prototype.getCmdConfMap = function(opt_noLazyCreate) {
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.ipc.DecryptRequest} returns this
+ * @return {!proto.chatlog.DecryptRequest} returns this
  */
-proto.ipc.DecryptRequest.prototype.clearCmdConfMap = function() {
+proto.chatlog.DecryptRequest.prototype.clearCmdConfMap = function() {
   this.getCmdConfMap().clear();
   return this;};
 
@@ -5451,8 +5785,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ipc.DecryptResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ipc.DecryptResponse.toObject(opt_includeInstance, this);
+proto.chatlog.DecryptResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.chatlog.DecryptResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5461,11 +5795,11 @@ proto.ipc.DecryptResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ipc.DecryptResponse} msg The msg instance to transform.
+ * @param {!proto.chatlog.DecryptResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptResponse.toObject = function(includeInstance, msg) {
+proto.chatlog.DecryptResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -5481,23 +5815,23 @@ proto.ipc.DecryptResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ipc.DecryptResponse}
+ * @return {!proto.chatlog.DecryptResponse}
  */
-proto.ipc.DecryptResponse.deserializeBinary = function(bytes) {
+proto.chatlog.DecryptResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ipc.DecryptResponse;
-  return proto.ipc.DecryptResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.chatlog.DecryptResponse;
+  return proto.chatlog.DecryptResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ipc.DecryptResponse} msg The message object to deserialize into.
+ * @param {!proto.chatlog.DecryptResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ipc.DecryptResponse}
+ * @return {!proto.chatlog.DecryptResponse}
  */
-proto.ipc.DecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.chatlog.DecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5517,9 +5851,9 @@ proto.ipc.DecryptResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ipc.DecryptResponse.prototype.serializeBinary = function() {
+proto.chatlog.DecryptResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ipc.DecryptResponse.serializeBinaryToWriter(this, writer);
+  proto.chatlog.DecryptResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5527,13 +5861,13 @@ proto.ipc.DecryptResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ipc.DecryptResponse} message
+ * @param {!proto.chatlog.DecryptResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ipc.DecryptResponse.serializeBinaryToWriter = function(message, writer) {
+proto.chatlog.DecryptResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
 
-goog.object.extend(exports, proto.ipc);
+goog.object.extend(exports, proto.chatlog);
