@@ -1596,7 +1596,7 @@ var File_proto_chatlog_proto protoreflect.FileDescriptor
 
 const file_proto_chatlog_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/chatlog.proto\x12\x03ipc\"*\n" +
+	"\x13proto/chatlog.proto\x12\achatlog\"*\n" +
 	"\x12SetLogLevelRequest\x12\x14\n" +
 	"\x05level\x18\x01 \x01(\tR\x05level\"\x15\n" +
 	"\x13SetLogLevelResponse\"\x81\x02\n" +
@@ -1619,9 +1619,9 @@ const file_proto_chatlog_proto_rawDesc = "" +
 	"RunRequest\x12\x1f\n" +
 	"\vconfig_path\x18\x01 \x01(\tR\n" +
 	"configPath\"\r\n" +
-	"\vRunResponse\"K\n" +
-	"\rSwitchRequest\x12 \n" +
-	"\x04info\x18\x01 \x01(\v2\f.ipc.AccountR\x04info\x12\x18\n" +
+	"\vRunResponse\"O\n" +
+	"\rSwitchRequest\x12$\n" +
+	"\x04info\x18\x01 \x01(\v2\x10.chatlog.AccountR\x04info\x12\x18\n" +
 	"\ahistory\x18\x02 \x01(\tR\ahistory\"\x10\n" +
 	"\x0eSwitchResponse\"\x15\n" +
 	"\x13StartServiceRequest\"\x16\n" +
@@ -1649,63 +1649,64 @@ const file_proto_chatlog_proto_rawDesc = "" +
 	"\fshow_xor_key\x18\x04 \x01(\bR\n" +
 	"showXorKey\",\n" +
 	"\x12CommandKeyResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"\xb8\x01\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"\xbc\x01\n" +
 	"\x15CommandDecryptRequest\x12\x1f\n" +
 	"\vconfig_path\x18\x01 \x01(\tR\n" +
-	"configPath\x12B\n" +
-	"\bcmd_conf\x18\x02 \x03(\v2'.ipc.CommandDecryptRequest.CmdConfEntryR\acmdConf\x1a:\n" +
+	"configPath\x12F\n" +
+	"\bcmd_conf\x18\x02 \x03(\v2+.chatlog.CommandDecryptRequest.CmdConfEntryR\acmdConf\x1a:\n" +
 	"\fCmdConfEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"\x18\n" +
-	"\x16CommandDecryptResponse\"\xbe\x01\n" +
+	"\x16CommandDecryptResponse\"\xc2\x01\n" +
 	"\x18CommandHTTPServerRequest\x12\x1f\n" +
 	"\vconfig_path\x18\x01 \x01(\tR\n" +
-	"configPath\x12E\n" +
-	"\bcmd_conf\x18\x02 \x03(\v2*.ipc.CommandHTTPServerRequest.CmdConfEntryR\acmdConf\x1a:\n" +
+	"configPath\x12I\n" +
+	"\bcmd_conf\x18\x02 \x03(\v2..chatlog.CommandHTTPServerRequest.CmdConfEntryR\acmdConf\x1a:\n" +
 	"\fCmdConfEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"\x1b\n" +
 	"\x19CommandHTTPServerResponse\"\x1b\n" +
-	"\x19GetWeChatInstancesRequest\"F\n" +
-	"\x1aGetWeChatInstancesResponse\x12(\n" +
-	"\baccounts\x18\x01 \x03(\v2\f.ipc.AccountR\baccounts\"z\n" +
+	"\x19GetWeChatInstancesRequest\"J\n" +
+	"\x1aGetWeChatInstancesResponse\x12,\n" +
+	"\baccounts\x18\x01 \x03(\v2\x10.chatlog.AccountR\baccounts\"z\n" +
 	"\rGetKeyRequest\x12\x1f\n" +
 	"\vconfig_path\x18\x01 \x01(\tR\n" +
 	"configPath\x12\x10\n" +
 	"\x03pid\x18\x02 \x01(\x05R\x03pid\x12\x14\n" +
 	"\x05force\x18\x03 \x01(\bR\x05force\x12 \n" +
 	"\fshow_xor_key\x18\x04 \x01(\bR\n" +
-	"showXorKey\"2\n" +
-	"\x0eGetKeyResponse\x12 \n" +
-	"\x04data\x18\x01 \x01(\v2\f.ipc.KeyDataR\x04data\"\xaa\x01\n" +
+	"showXorKey\"6\n" +
+	"\x0eGetKeyResponse\x12$\n" +
+	"\x04data\x18\x01 \x01(\v2\x10.chatlog.KeyDataR\x04data\"\xae\x01\n" +
 	"\x0eDecryptRequest\x12\x1f\n" +
 	"\vconfig_path\x18\x01 \x01(\tR\n" +
-	"configPath\x12;\n" +
-	"\bcmd_conf\x18\x02 \x03(\v2 .ipc.DecryptRequest.CmdConfEntryR\acmdConf\x1a:\n" +
+	"configPath\x12?\n" +
+	"\bcmd_conf\x18\x02 \x03(\v2$.chatlog.DecryptRequest.CmdConfEntryR\acmdConf\x1a:\n" +
 	"\fCmdConfEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"\x11\n" +
-	"\x0fDecryptResponse2\x8a\t\n" +
-	"\x0eManagerService\x12@\n" +
-	"\vSetLogLevel\x12\x17.ipc.SetLogLevelRequest\x1a\x18.ipc.SetLogLevelResponse\x12(\n" +
-	"\x03Run\x12\x0f.ipc.RunRequest\x1a\x10.ipc.RunResponse\x121\n" +
-	"\x06Switch\x12\x12.ipc.SwitchRequest\x1a\x13.ipc.SwitchResponse\x12C\n" +
-	"\fStartService\x12\x18.ipc.StartServiceRequest\x1a\x19.ipc.StartServiceResponse\x12@\n" +
-	"\vStopService\x12\x17.ipc.StopServiceRequest\x1a\x18.ipc.StopServiceResponse\x12@\n" +
-	"\vSetHTTPAddr\x12\x17.ipc.SetHTTPAddrRequest\x1a\x18.ipc.SetHTTPAddrResponse\x12=\n" +
+	"\x0fDecryptResponse2\x92\n" +
 	"\n" +
-	"GetDataKey\x12\x16.ipc.GetDataKeyRequest\x1a\x17.ipc.GetDataKeyResponse\x12I\n" +
-	"\x0eDecryptDBFiles\x12\x1a.ipc.DecryptDBFilesRequest\x1a\x1b.ipc.DecryptDBFilesResponse\x12O\n" +
-	"\x10StartAutoDecrypt\x12\x1c.ipc.StartAutoDecryptRequest\x1a\x1d.ipc.StartAutoDecryptResponse\x12L\n" +
-	"\x0fStopAutoDecrypt\x12\x1b.ipc.StopAutoDecryptRequest\x1a\x1c.ipc.StopAutoDecryptResponse\x12I\n" +
-	"\x0eRefreshSession\x12\x1a.ipc.RefreshSessionRequest\x1a\x1b.ipc.RefreshSessionResponse\x12=\n" +
+	"\x0eManagerService\x12H\n" +
+	"\vSetLogLevel\x12\x1b.chatlog.SetLogLevelRequest\x1a\x1c.chatlog.SetLogLevelResponse\x120\n" +
+	"\x03Run\x12\x13.chatlog.RunRequest\x1a\x14.chatlog.RunResponse\x129\n" +
+	"\x06Switch\x12\x16.chatlog.SwitchRequest\x1a\x17.chatlog.SwitchResponse\x12K\n" +
+	"\fStartService\x12\x1c.chatlog.StartServiceRequest\x1a\x1d.chatlog.StartServiceResponse\x12H\n" +
+	"\vStopService\x12\x1b.chatlog.StopServiceRequest\x1a\x1c.chatlog.StopServiceResponse\x12H\n" +
+	"\vSetHTTPAddr\x12\x1b.chatlog.SetHTTPAddrRequest\x1a\x1c.chatlog.SetHTTPAddrResponse\x12E\n" +
 	"\n" +
-	"CommandKey\x12\x16.ipc.CommandKeyRequest\x1a\x17.ipc.CommandKeyResponse\x12I\n" +
-	"\x0eCommandDecrypt\x12\x1a.ipc.CommandDecryptRequest\x1a\x1b.ipc.CommandDecryptResponse\x12R\n" +
-	"\x11CommandHTTPServer\x12\x1d.ipc.CommandHTTPServerRequest\x1a\x1e.ipc.CommandHTTPServerResponse\x12U\n" +
-	"\x12GetWeChatInstances\x12\x1e.ipc.GetWeChatInstancesRequest\x1a\x1f.ipc.GetWeChatInstancesResponse\x121\n" +
-	"\x06GetKey\x12\x12.ipc.GetKeyRequest\x1a\x13.ipc.GetKeyResponse\x124\n" +
-	"\aDecrypt\x12\x13.ipc.DecryptRequest\x1a\x14.ipc.DecryptResponseB\x15Z\x13wechat-mem0-core/pbb\x06proto3"
+	"GetDataKey\x12\x1a.chatlog.GetDataKeyRequest\x1a\x1b.chatlog.GetDataKeyResponse\x12Q\n" +
+	"\x0eDecryptDBFiles\x12\x1e.chatlog.DecryptDBFilesRequest\x1a\x1f.chatlog.DecryptDBFilesResponse\x12W\n" +
+	"\x10StartAutoDecrypt\x12 .chatlog.StartAutoDecryptRequest\x1a!.chatlog.StartAutoDecryptResponse\x12T\n" +
+	"\x0fStopAutoDecrypt\x12\x1f.chatlog.StopAutoDecryptRequest\x1a .chatlog.StopAutoDecryptResponse\x12Q\n" +
+	"\x0eRefreshSession\x12\x1e.chatlog.RefreshSessionRequest\x1a\x1f.chatlog.RefreshSessionResponse\x12E\n" +
+	"\n" +
+	"CommandKey\x12\x1a.chatlog.CommandKeyRequest\x1a\x1b.chatlog.CommandKeyResponse\x12Q\n" +
+	"\x0eCommandDecrypt\x12\x1e.chatlog.CommandDecryptRequest\x1a\x1f.chatlog.CommandDecryptResponse\x12Z\n" +
+	"\x11CommandHTTPServer\x12!.chatlog.CommandHTTPServerRequest\x1a\".chatlog.CommandHTTPServerResponse\x12]\n" +
+	"\x12GetWeChatInstances\x12\".chatlog.GetWeChatInstancesRequest\x1a#.chatlog.GetWeChatInstancesResponse\x129\n" +
+	"\x06GetKey\x12\x16.chatlog.GetKeyRequest\x1a\x17.chatlog.GetKeyResponse\x12<\n" +
+	"\aDecrypt\x12\x17.chatlog.DecryptRequest\x1a\x18.chatlog.DecryptResponseB\x15Z\x13wechat-mem0-core/pbb\x06proto3"
 
 var (
 	file_proto_chatlog_proto_rawDescOnce sync.Once
@@ -1721,87 +1722,87 @@ func file_proto_chatlog_proto_rawDescGZIP() []byte {
 
 var file_proto_chatlog_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
 var file_proto_chatlog_proto_goTypes = []any{
-	(*SetLogLevelRequest)(nil),         // 0: ipc.SetLogLevelRequest
-	(*SetLogLevelResponse)(nil),        // 1: ipc.SetLogLevelResponse
-	(*Account)(nil),                    // 2: ipc.Account
-	(*KeyData)(nil),                    // 3: ipc.KeyData
-	(*RunRequest)(nil),                 // 4: ipc.RunRequest
-	(*RunResponse)(nil),                // 5: ipc.RunResponse
-	(*SwitchRequest)(nil),              // 6: ipc.SwitchRequest
-	(*SwitchResponse)(nil),             // 7: ipc.SwitchResponse
-	(*StartServiceRequest)(nil),        // 8: ipc.StartServiceRequest
-	(*StartServiceResponse)(nil),       // 9: ipc.StartServiceResponse
-	(*StopServiceRequest)(nil),         // 10: ipc.StopServiceRequest
-	(*StopServiceResponse)(nil),        // 11: ipc.StopServiceResponse
-	(*SetHTTPAddrRequest)(nil),         // 12: ipc.SetHTTPAddrRequest
-	(*SetHTTPAddrResponse)(nil),        // 13: ipc.SetHTTPAddrResponse
-	(*GetDataKeyRequest)(nil),          // 14: ipc.GetDataKeyRequest
-	(*GetDataKeyResponse)(nil),         // 15: ipc.GetDataKeyResponse
-	(*DecryptDBFilesRequest)(nil),      // 16: ipc.DecryptDBFilesRequest
-	(*DecryptDBFilesResponse)(nil),     // 17: ipc.DecryptDBFilesResponse
-	(*StartAutoDecryptRequest)(nil),    // 18: ipc.StartAutoDecryptRequest
-	(*StartAutoDecryptResponse)(nil),   // 19: ipc.StartAutoDecryptResponse
-	(*StopAutoDecryptRequest)(nil),     // 20: ipc.StopAutoDecryptRequest
-	(*StopAutoDecryptResponse)(nil),    // 21: ipc.StopAutoDecryptResponse
-	(*RefreshSessionRequest)(nil),      // 22: ipc.RefreshSessionRequest
-	(*RefreshSessionResponse)(nil),     // 23: ipc.RefreshSessionResponse
-	(*CommandKeyRequest)(nil),          // 24: ipc.CommandKeyRequest
-	(*CommandKeyResponse)(nil),         // 25: ipc.CommandKeyResponse
-	(*CommandDecryptRequest)(nil),      // 26: ipc.CommandDecryptRequest
-	(*CommandDecryptResponse)(nil),     // 27: ipc.CommandDecryptResponse
-	(*CommandHTTPServerRequest)(nil),   // 28: ipc.CommandHTTPServerRequest
-	(*CommandHTTPServerResponse)(nil),  // 29: ipc.CommandHTTPServerResponse
-	(*GetWeChatInstancesRequest)(nil),  // 30: ipc.GetWeChatInstancesRequest
-	(*GetWeChatInstancesResponse)(nil), // 31: ipc.GetWeChatInstancesResponse
-	(*GetKeyRequest)(nil),              // 32: ipc.GetKeyRequest
-	(*GetKeyResponse)(nil),             // 33: ipc.GetKeyResponse
-	(*DecryptRequest)(nil),             // 34: ipc.DecryptRequest
-	(*DecryptResponse)(nil),            // 35: ipc.DecryptResponse
-	nil,                                // 36: ipc.CommandDecryptRequest.CmdConfEntry
-	nil,                                // 37: ipc.CommandHTTPServerRequest.CmdConfEntry
-	nil,                                // 38: ipc.DecryptRequest.CmdConfEntry
+	(*SetLogLevelRequest)(nil),         // 0: chatlog.SetLogLevelRequest
+	(*SetLogLevelResponse)(nil),        // 1: chatlog.SetLogLevelResponse
+	(*Account)(nil),                    // 2: chatlog.Account
+	(*KeyData)(nil),                    // 3: chatlog.KeyData
+	(*RunRequest)(nil),                 // 4: chatlog.RunRequest
+	(*RunResponse)(nil),                // 5: chatlog.RunResponse
+	(*SwitchRequest)(nil),              // 6: chatlog.SwitchRequest
+	(*SwitchResponse)(nil),             // 7: chatlog.SwitchResponse
+	(*StartServiceRequest)(nil),        // 8: chatlog.StartServiceRequest
+	(*StartServiceResponse)(nil),       // 9: chatlog.StartServiceResponse
+	(*StopServiceRequest)(nil),         // 10: chatlog.StopServiceRequest
+	(*StopServiceResponse)(nil),        // 11: chatlog.StopServiceResponse
+	(*SetHTTPAddrRequest)(nil),         // 12: chatlog.SetHTTPAddrRequest
+	(*SetHTTPAddrResponse)(nil),        // 13: chatlog.SetHTTPAddrResponse
+	(*GetDataKeyRequest)(nil),          // 14: chatlog.GetDataKeyRequest
+	(*GetDataKeyResponse)(nil),         // 15: chatlog.GetDataKeyResponse
+	(*DecryptDBFilesRequest)(nil),      // 16: chatlog.DecryptDBFilesRequest
+	(*DecryptDBFilesResponse)(nil),     // 17: chatlog.DecryptDBFilesResponse
+	(*StartAutoDecryptRequest)(nil),    // 18: chatlog.StartAutoDecryptRequest
+	(*StartAutoDecryptResponse)(nil),   // 19: chatlog.StartAutoDecryptResponse
+	(*StopAutoDecryptRequest)(nil),     // 20: chatlog.StopAutoDecryptRequest
+	(*StopAutoDecryptResponse)(nil),    // 21: chatlog.StopAutoDecryptResponse
+	(*RefreshSessionRequest)(nil),      // 22: chatlog.RefreshSessionRequest
+	(*RefreshSessionResponse)(nil),     // 23: chatlog.RefreshSessionResponse
+	(*CommandKeyRequest)(nil),          // 24: chatlog.CommandKeyRequest
+	(*CommandKeyResponse)(nil),         // 25: chatlog.CommandKeyResponse
+	(*CommandDecryptRequest)(nil),      // 26: chatlog.CommandDecryptRequest
+	(*CommandDecryptResponse)(nil),     // 27: chatlog.CommandDecryptResponse
+	(*CommandHTTPServerRequest)(nil),   // 28: chatlog.CommandHTTPServerRequest
+	(*CommandHTTPServerResponse)(nil),  // 29: chatlog.CommandHTTPServerResponse
+	(*GetWeChatInstancesRequest)(nil),  // 30: chatlog.GetWeChatInstancesRequest
+	(*GetWeChatInstancesResponse)(nil), // 31: chatlog.GetWeChatInstancesResponse
+	(*GetKeyRequest)(nil),              // 32: chatlog.GetKeyRequest
+	(*GetKeyResponse)(nil),             // 33: chatlog.GetKeyResponse
+	(*DecryptRequest)(nil),             // 34: chatlog.DecryptRequest
+	(*DecryptResponse)(nil),            // 35: chatlog.DecryptResponse
+	nil,                                // 36: chatlog.CommandDecryptRequest.CmdConfEntry
+	nil,                                // 37: chatlog.CommandHTTPServerRequest.CmdConfEntry
+	nil,                                // 38: chatlog.DecryptRequest.CmdConfEntry
 }
 var file_proto_chatlog_proto_depIdxs = []int32{
-	2,  // 0: ipc.SwitchRequest.info:type_name -> ipc.Account
-	36, // 1: ipc.CommandDecryptRequest.cmd_conf:type_name -> ipc.CommandDecryptRequest.CmdConfEntry
-	37, // 2: ipc.CommandHTTPServerRequest.cmd_conf:type_name -> ipc.CommandHTTPServerRequest.CmdConfEntry
-	2,  // 3: ipc.GetWeChatInstancesResponse.accounts:type_name -> ipc.Account
-	3,  // 4: ipc.GetKeyResponse.data:type_name -> ipc.KeyData
-	38, // 5: ipc.DecryptRequest.cmd_conf:type_name -> ipc.DecryptRequest.CmdConfEntry
-	0,  // 6: ipc.ManagerService.SetLogLevel:input_type -> ipc.SetLogLevelRequest
-	4,  // 7: ipc.ManagerService.Run:input_type -> ipc.RunRequest
-	6,  // 8: ipc.ManagerService.Switch:input_type -> ipc.SwitchRequest
-	8,  // 9: ipc.ManagerService.StartService:input_type -> ipc.StartServiceRequest
-	10, // 10: ipc.ManagerService.StopService:input_type -> ipc.StopServiceRequest
-	12, // 11: ipc.ManagerService.SetHTTPAddr:input_type -> ipc.SetHTTPAddrRequest
-	14, // 12: ipc.ManagerService.GetDataKey:input_type -> ipc.GetDataKeyRequest
-	16, // 13: ipc.ManagerService.DecryptDBFiles:input_type -> ipc.DecryptDBFilesRequest
-	18, // 14: ipc.ManagerService.StartAutoDecrypt:input_type -> ipc.StartAutoDecryptRequest
-	20, // 15: ipc.ManagerService.StopAutoDecrypt:input_type -> ipc.StopAutoDecryptRequest
-	22, // 16: ipc.ManagerService.RefreshSession:input_type -> ipc.RefreshSessionRequest
-	24, // 17: ipc.ManagerService.CommandKey:input_type -> ipc.CommandKeyRequest
-	26, // 18: ipc.ManagerService.CommandDecrypt:input_type -> ipc.CommandDecryptRequest
-	28, // 19: ipc.ManagerService.CommandHTTPServer:input_type -> ipc.CommandHTTPServerRequest
-	30, // 20: ipc.ManagerService.GetWeChatInstances:input_type -> ipc.GetWeChatInstancesRequest
-	32, // 21: ipc.ManagerService.GetKey:input_type -> ipc.GetKeyRequest
-	34, // 22: ipc.ManagerService.Decrypt:input_type -> ipc.DecryptRequest
-	1,  // 23: ipc.ManagerService.SetLogLevel:output_type -> ipc.SetLogLevelResponse
-	5,  // 24: ipc.ManagerService.Run:output_type -> ipc.RunResponse
-	7,  // 25: ipc.ManagerService.Switch:output_type -> ipc.SwitchResponse
-	9,  // 26: ipc.ManagerService.StartService:output_type -> ipc.StartServiceResponse
-	11, // 27: ipc.ManagerService.StopService:output_type -> ipc.StopServiceResponse
-	13, // 28: ipc.ManagerService.SetHTTPAddr:output_type -> ipc.SetHTTPAddrResponse
-	15, // 29: ipc.ManagerService.GetDataKey:output_type -> ipc.GetDataKeyResponse
-	17, // 30: ipc.ManagerService.DecryptDBFiles:output_type -> ipc.DecryptDBFilesResponse
-	19, // 31: ipc.ManagerService.StartAutoDecrypt:output_type -> ipc.StartAutoDecryptResponse
-	21, // 32: ipc.ManagerService.StopAutoDecrypt:output_type -> ipc.StopAutoDecryptResponse
-	23, // 33: ipc.ManagerService.RefreshSession:output_type -> ipc.RefreshSessionResponse
-	25, // 34: ipc.ManagerService.CommandKey:output_type -> ipc.CommandKeyResponse
-	27, // 35: ipc.ManagerService.CommandDecrypt:output_type -> ipc.CommandDecryptResponse
-	29, // 36: ipc.ManagerService.CommandHTTPServer:output_type -> ipc.CommandHTTPServerResponse
-	31, // 37: ipc.ManagerService.GetWeChatInstances:output_type -> ipc.GetWeChatInstancesResponse
-	33, // 38: ipc.ManagerService.GetKey:output_type -> ipc.GetKeyResponse
-	35, // 39: ipc.ManagerService.Decrypt:output_type -> ipc.DecryptResponse
+	2,  // 0: chatlog.SwitchRequest.info:type_name -> chatlog.Account
+	36, // 1: chatlog.CommandDecryptRequest.cmd_conf:type_name -> chatlog.CommandDecryptRequest.CmdConfEntry
+	37, // 2: chatlog.CommandHTTPServerRequest.cmd_conf:type_name -> chatlog.CommandHTTPServerRequest.CmdConfEntry
+	2,  // 3: chatlog.GetWeChatInstancesResponse.accounts:type_name -> chatlog.Account
+	3,  // 4: chatlog.GetKeyResponse.data:type_name -> chatlog.KeyData
+	38, // 5: chatlog.DecryptRequest.cmd_conf:type_name -> chatlog.DecryptRequest.CmdConfEntry
+	0,  // 6: chatlog.ManagerService.SetLogLevel:input_type -> chatlog.SetLogLevelRequest
+	4,  // 7: chatlog.ManagerService.Run:input_type -> chatlog.RunRequest
+	6,  // 8: chatlog.ManagerService.Switch:input_type -> chatlog.SwitchRequest
+	8,  // 9: chatlog.ManagerService.StartService:input_type -> chatlog.StartServiceRequest
+	10, // 10: chatlog.ManagerService.StopService:input_type -> chatlog.StopServiceRequest
+	12, // 11: chatlog.ManagerService.SetHTTPAddr:input_type -> chatlog.SetHTTPAddrRequest
+	14, // 12: chatlog.ManagerService.GetDataKey:input_type -> chatlog.GetDataKeyRequest
+	16, // 13: chatlog.ManagerService.DecryptDBFiles:input_type -> chatlog.DecryptDBFilesRequest
+	18, // 14: chatlog.ManagerService.StartAutoDecrypt:input_type -> chatlog.StartAutoDecryptRequest
+	20, // 15: chatlog.ManagerService.StopAutoDecrypt:input_type -> chatlog.StopAutoDecryptRequest
+	22, // 16: chatlog.ManagerService.RefreshSession:input_type -> chatlog.RefreshSessionRequest
+	24, // 17: chatlog.ManagerService.CommandKey:input_type -> chatlog.CommandKeyRequest
+	26, // 18: chatlog.ManagerService.CommandDecrypt:input_type -> chatlog.CommandDecryptRequest
+	28, // 19: chatlog.ManagerService.CommandHTTPServer:input_type -> chatlog.CommandHTTPServerRequest
+	30, // 20: chatlog.ManagerService.GetWeChatInstances:input_type -> chatlog.GetWeChatInstancesRequest
+	32, // 21: chatlog.ManagerService.GetKey:input_type -> chatlog.GetKeyRequest
+	34, // 22: chatlog.ManagerService.Decrypt:input_type -> chatlog.DecryptRequest
+	1,  // 23: chatlog.ManagerService.SetLogLevel:output_type -> chatlog.SetLogLevelResponse
+	5,  // 24: chatlog.ManagerService.Run:output_type -> chatlog.RunResponse
+	7,  // 25: chatlog.ManagerService.Switch:output_type -> chatlog.SwitchResponse
+	9,  // 26: chatlog.ManagerService.StartService:output_type -> chatlog.StartServiceResponse
+	11, // 27: chatlog.ManagerService.StopService:output_type -> chatlog.StopServiceResponse
+	13, // 28: chatlog.ManagerService.SetHTTPAddr:output_type -> chatlog.SetHTTPAddrResponse
+	15, // 29: chatlog.ManagerService.GetDataKey:output_type -> chatlog.GetDataKeyResponse
+	17, // 30: chatlog.ManagerService.DecryptDBFiles:output_type -> chatlog.DecryptDBFilesResponse
+	19, // 31: chatlog.ManagerService.StartAutoDecrypt:output_type -> chatlog.StartAutoDecryptResponse
+	21, // 32: chatlog.ManagerService.StopAutoDecrypt:output_type -> chatlog.StopAutoDecryptResponse
+	23, // 33: chatlog.ManagerService.RefreshSession:output_type -> chatlog.RefreshSessionResponse
+	25, // 34: chatlog.ManagerService.CommandKey:output_type -> chatlog.CommandKeyResponse
+	27, // 35: chatlog.ManagerService.CommandDecrypt:output_type -> chatlog.CommandDecryptResponse
+	29, // 36: chatlog.ManagerService.CommandHTTPServer:output_type -> chatlog.CommandHTTPServerResponse
+	31, // 37: chatlog.ManagerService.GetWeChatInstances:output_type -> chatlog.GetWeChatInstancesResponse
+	33, // 38: chatlog.ManagerService.GetKey:output_type -> chatlog.GetKeyResponse
+	35, // 39: chatlog.ManagerService.Decrypt:output_type -> chatlog.DecryptResponse
 	23, // [23:40] is the sub-list for method output_type
 	6,  // [6:23] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name

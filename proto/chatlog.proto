@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ipc;
+package chatlog;
 option go_package = "wechat-mem0-core/pb";
 
 // ManagerService provides gRPC interface for WeChat operations
@@ -29,7 +29,7 @@ message SetLogLevelRequest {
 }
 message SetLogLevelResponse {}
 
-// Account 信息 (对应 iwechat.Account)
+// Account 信息 (对应 wechat.Account)
 message Account {
   string name = 1;
   string platform = 2;
