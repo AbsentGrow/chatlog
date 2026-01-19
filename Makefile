@@ -61,7 +61,7 @@ crossbuild: clean
 
 build-wechat-mem0-core:
 	@echo "🔨 Building wechat-mem0-core for current platform..."
-	CGO_ENABLED=1 $(GO) build -trimpath $(LDFLAGS) -o bin/wechat-mem0-core cmd/wechat-mem0-core/main.go
+	CGO_ENABLED=1 $(GO) build -trimpath $(LDFLAGS) -o bin/wechat-mem0-core cmd/wechat-mem0-core/*.go
 
 crossbuild-wechat-mem0-core:
 	@echo "🌍 Building wechat-mem0-core for multiple platforms..."
