@@ -21,6 +21,7 @@ service ManagerService {
   rpc GetWeChatInstances(GetWeChatInstancesRequest) returns (GetWeChatInstancesResponse);
   rpc GetKey(GetKeyRequest) returns (GetKeyResponse);
   rpc Decrypt(DecryptRequest) returns (DecryptResponse);
+  rpc Backup(BackupRequest) returns (BackupResponse);
 }
 
 // 日志级别控制
@@ -81,6 +82,9 @@ message DecryptDBFilesResponse {}
 
 message StartAutoDecryptRequest {}
 message StartAutoDecryptResponse {}
+
+message BackupRequest {}
+message BackupResponse {}
 
 message StopAutoDecryptRequest {}
 message StopAutoDecryptResponse {}

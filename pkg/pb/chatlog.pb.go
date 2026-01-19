@@ -102,7 +102,7 @@ func (*SetLogLevelResponse) Descriptor() ([]byte, []int) {
 	return file_proto_chatlog_proto_rawDescGZIP(), []int{1}
 }
 
-// Account 信息 (对应 iwechat.Account)
+// Account 信息 (对应 wechat.Account)
 type Account struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
@@ -880,6 +880,78 @@ func (*StartAutoDecryptResponse) Descriptor() ([]byte, []int) {
 	return file_proto_chatlog_proto_rawDescGZIP(), []int{19}
 }
 
+type BackupRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *BackupRequest) Reset() {
+	*x = BackupRequest{}
+	mi := &file_proto_chatlog_proto_msgTypes[20]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BackupRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BackupRequest) ProtoMessage() {}
+
+func (x *BackupRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_chatlog_proto_msgTypes[20]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BackupRequest.ProtoReflect.Descriptor instead.
+func (*BackupRequest) Descriptor() ([]byte, []int) {
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{20}
+}
+
+type BackupResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *BackupResponse) Reset() {
+	*x = BackupResponse{}
+	mi := &file_proto_chatlog_proto_msgTypes[21]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BackupResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BackupResponse) ProtoMessage() {}
+
+func (x *BackupResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_chatlog_proto_msgTypes[21]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BackupResponse.ProtoReflect.Descriptor instead.
+func (*BackupResponse) Descriptor() ([]byte, []int) {
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{21}
+}
+
 type StopAutoDecryptRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -888,7 +960,7 @@ type StopAutoDecryptRequest struct {
 
 func (x *StopAutoDecryptRequest) Reset() {
 	*x = StopAutoDecryptRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[20]
+	mi := &file_proto_chatlog_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -900,7 +972,7 @@ func (x *StopAutoDecryptRequest) String() string {
 func (*StopAutoDecryptRequest) ProtoMessage() {}
 
 func (x *StopAutoDecryptRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[20]
+	mi := &file_proto_chatlog_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -913,7 +985,7 @@ func (x *StopAutoDecryptRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StopAutoDecryptRequest.ProtoReflect.Descriptor instead.
 func (*StopAutoDecryptRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{20}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{22}
 }
 
 type StopAutoDecryptResponse struct {
@@ -924,7 +996,7 @@ type StopAutoDecryptResponse struct {
 
 func (x *StopAutoDecryptResponse) Reset() {
 	*x = StopAutoDecryptResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[21]
+	mi := &file_proto_chatlog_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -936,7 +1008,7 @@ func (x *StopAutoDecryptResponse) String() string {
 func (*StopAutoDecryptResponse) ProtoMessage() {}
 
 func (x *StopAutoDecryptResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[21]
+	mi := &file_proto_chatlog_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -949,7 +1021,7 @@ func (x *StopAutoDecryptResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StopAutoDecryptResponse.ProtoReflect.Descriptor instead.
 func (*StopAutoDecryptResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{21}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{23}
 }
 
 type RefreshSessionRequest struct {
@@ -960,7 +1032,7 @@ type RefreshSessionRequest struct {
 
 func (x *RefreshSessionRequest) Reset() {
 	*x = RefreshSessionRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[22]
+	mi := &file_proto_chatlog_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -972,7 +1044,7 @@ func (x *RefreshSessionRequest) String() string {
 func (*RefreshSessionRequest) ProtoMessage() {}
 
 func (x *RefreshSessionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[22]
+	mi := &file_proto_chatlog_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -985,7 +1057,7 @@ func (x *RefreshSessionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshSessionRequest.ProtoReflect.Descriptor instead.
 func (*RefreshSessionRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{22}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{24}
 }
 
 type RefreshSessionResponse struct {
@@ -996,7 +1068,7 @@ type RefreshSessionResponse struct {
 
 func (x *RefreshSessionResponse) Reset() {
 	*x = RefreshSessionResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[23]
+	mi := &file_proto_chatlog_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1008,7 +1080,7 @@ func (x *RefreshSessionResponse) String() string {
 func (*RefreshSessionResponse) ProtoMessage() {}
 
 func (x *RefreshSessionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[23]
+	mi := &file_proto_chatlog_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1021,7 +1093,7 @@ func (x *RefreshSessionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshSessionResponse.ProtoReflect.Descriptor instead.
 func (*RefreshSessionResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{23}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{25}
 }
 
 type CommandKeyRequest struct {
@@ -1036,7 +1108,7 @@ type CommandKeyRequest struct {
 
 func (x *CommandKeyRequest) Reset() {
 	*x = CommandKeyRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[24]
+	mi := &file_proto_chatlog_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1048,7 +1120,7 @@ func (x *CommandKeyRequest) String() string {
 func (*CommandKeyRequest) ProtoMessage() {}
 
 func (x *CommandKeyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[24]
+	mi := &file_proto_chatlog_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1061,7 +1133,7 @@ func (x *CommandKeyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandKeyRequest.ProtoReflect.Descriptor instead.
 func (*CommandKeyRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{24}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *CommandKeyRequest) GetConfigPath() string {
@@ -1101,7 +1173,7 @@ type CommandKeyResponse struct {
 
 func (x *CommandKeyResponse) Reset() {
 	*x = CommandKeyResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[25]
+	mi := &file_proto_chatlog_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1113,7 +1185,7 @@ func (x *CommandKeyResponse) String() string {
 func (*CommandKeyResponse) ProtoMessage() {}
 
 func (x *CommandKeyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[25]
+	mi := &file_proto_chatlog_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1126,7 +1198,7 @@ func (x *CommandKeyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandKeyResponse.ProtoReflect.Descriptor instead.
 func (*CommandKeyResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{25}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *CommandKeyResponse) GetResult() string {
@@ -1146,7 +1218,7 @@ type CommandDecryptRequest struct {
 
 func (x *CommandDecryptRequest) Reset() {
 	*x = CommandDecryptRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[26]
+	mi := &file_proto_chatlog_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1158,7 +1230,7 @@ func (x *CommandDecryptRequest) String() string {
 func (*CommandDecryptRequest) ProtoMessage() {}
 
 func (x *CommandDecryptRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[26]
+	mi := &file_proto_chatlog_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1171,7 +1243,7 @@ func (x *CommandDecryptRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandDecryptRequest.ProtoReflect.Descriptor instead.
 func (*CommandDecryptRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{26}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *CommandDecryptRequest) GetConfigPath() string {
@@ -1196,7 +1268,7 @@ type CommandDecryptResponse struct {
 
 func (x *CommandDecryptResponse) Reset() {
 	*x = CommandDecryptResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[27]
+	mi := &file_proto_chatlog_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1208,7 +1280,7 @@ func (x *CommandDecryptResponse) String() string {
 func (*CommandDecryptResponse) ProtoMessage() {}
 
 func (x *CommandDecryptResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[27]
+	mi := &file_proto_chatlog_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1221,7 +1293,7 @@ func (x *CommandDecryptResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandDecryptResponse.ProtoReflect.Descriptor instead.
 func (*CommandDecryptResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{27}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{29}
 }
 
 type CommandHTTPServerRequest struct {
@@ -1234,7 +1306,7 @@ type CommandHTTPServerRequest struct {
 
 func (x *CommandHTTPServerRequest) Reset() {
 	*x = CommandHTTPServerRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[28]
+	mi := &file_proto_chatlog_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1246,7 +1318,7 @@ func (x *CommandHTTPServerRequest) String() string {
 func (*CommandHTTPServerRequest) ProtoMessage() {}
 
 func (x *CommandHTTPServerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[28]
+	mi := &file_proto_chatlog_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1259,7 +1331,7 @@ func (x *CommandHTTPServerRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandHTTPServerRequest.ProtoReflect.Descriptor instead.
 func (*CommandHTTPServerRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{28}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *CommandHTTPServerRequest) GetConfigPath() string {
@@ -1284,7 +1356,7 @@ type CommandHTTPServerResponse struct {
 
 func (x *CommandHTTPServerResponse) Reset() {
 	*x = CommandHTTPServerResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[29]
+	mi := &file_proto_chatlog_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1296,7 +1368,7 @@ func (x *CommandHTTPServerResponse) String() string {
 func (*CommandHTTPServerResponse) ProtoMessage() {}
 
 func (x *CommandHTTPServerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[29]
+	mi := &file_proto_chatlog_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1309,7 +1381,7 @@ func (x *CommandHTTPServerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandHTTPServerResponse.ProtoReflect.Descriptor instead.
 func (*CommandHTTPServerResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{29}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{31}
 }
 
 type GetWeChatInstancesRequest struct {
@@ -1320,7 +1392,7 @@ type GetWeChatInstancesRequest struct {
 
 func (x *GetWeChatInstancesRequest) Reset() {
 	*x = GetWeChatInstancesRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[30]
+	mi := &file_proto_chatlog_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1332,7 +1404,7 @@ func (x *GetWeChatInstancesRequest) String() string {
 func (*GetWeChatInstancesRequest) ProtoMessage() {}
 
 func (x *GetWeChatInstancesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[30]
+	mi := &file_proto_chatlog_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1345,7 +1417,7 @@ func (x *GetWeChatInstancesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWeChatInstancesRequest.ProtoReflect.Descriptor instead.
 func (*GetWeChatInstancesRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{30}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{32}
 }
 
 type GetWeChatInstancesResponse struct {
@@ -1357,7 +1429,7 @@ type GetWeChatInstancesResponse struct {
 
 func (x *GetWeChatInstancesResponse) Reset() {
 	*x = GetWeChatInstancesResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[31]
+	mi := &file_proto_chatlog_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1369,7 +1441,7 @@ func (x *GetWeChatInstancesResponse) String() string {
 func (*GetWeChatInstancesResponse) ProtoMessage() {}
 
 func (x *GetWeChatInstancesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[31]
+	mi := &file_proto_chatlog_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1382,7 +1454,7 @@ func (x *GetWeChatInstancesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWeChatInstancesResponse.ProtoReflect.Descriptor instead.
 func (*GetWeChatInstancesResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{31}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *GetWeChatInstancesResponse) GetAccounts() []*Account {
@@ -1404,7 +1476,7 @@ type GetKeyRequest struct {
 
 func (x *GetKeyRequest) Reset() {
 	*x = GetKeyRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[32]
+	mi := &file_proto_chatlog_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1416,7 +1488,7 @@ func (x *GetKeyRequest) String() string {
 func (*GetKeyRequest) ProtoMessage() {}
 
 func (x *GetKeyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[32]
+	mi := &file_proto_chatlog_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1429,7 +1501,7 @@ func (x *GetKeyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetKeyRequest.ProtoReflect.Descriptor instead.
 func (*GetKeyRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{32}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *GetKeyRequest) GetConfigPath() string {
@@ -1469,7 +1541,7 @@ type GetKeyResponse struct {
 
 func (x *GetKeyResponse) Reset() {
 	*x = GetKeyResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[33]
+	mi := &file_proto_chatlog_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1481,7 +1553,7 @@ func (x *GetKeyResponse) String() string {
 func (*GetKeyResponse) ProtoMessage() {}
 
 func (x *GetKeyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[33]
+	mi := &file_proto_chatlog_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1494,7 +1566,7 @@ func (x *GetKeyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetKeyResponse.ProtoReflect.Descriptor instead.
 func (*GetKeyResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{33}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *GetKeyResponse) GetData() *KeyData {
@@ -1514,7 +1586,7 @@ type DecryptRequest struct {
 
 func (x *DecryptRequest) Reset() {
 	*x = DecryptRequest{}
-	mi := &file_proto_chatlog_proto_msgTypes[34]
+	mi := &file_proto_chatlog_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1526,7 +1598,7 @@ func (x *DecryptRequest) String() string {
 func (*DecryptRequest) ProtoMessage() {}
 
 func (x *DecryptRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[34]
+	mi := &file_proto_chatlog_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1539,7 +1611,7 @@ func (x *DecryptRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DecryptRequest.ProtoReflect.Descriptor instead.
 func (*DecryptRequest) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{34}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *DecryptRequest) GetConfigPath() string {
@@ -1564,7 +1636,7 @@ type DecryptResponse struct {
 
 func (x *DecryptResponse) Reset() {
 	*x = DecryptResponse{}
-	mi := &file_proto_chatlog_proto_msgTypes[35]
+	mi := &file_proto_chatlog_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1576,7 +1648,7 @@ func (x *DecryptResponse) String() string {
 func (*DecryptResponse) ProtoMessage() {}
 
 func (x *DecryptResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_chatlog_proto_msgTypes[35]
+	mi := &file_proto_chatlog_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1589,7 +1661,7 @@ func (x *DecryptResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DecryptResponse.ProtoReflect.Descriptor instead.
 func (*DecryptResponse) Descriptor() ([]byte, []int) {
-	return file_proto_chatlog_proto_rawDescGZIP(), []int{35}
+	return file_proto_chatlog_proto_rawDescGZIP(), []int{37}
 }
 
 var File_proto_chatlog_proto protoreflect.FileDescriptor
@@ -1636,7 +1708,9 @@ const file_proto_chatlog_proto_rawDesc = "" +
 	"\x15DecryptDBFilesRequest\"\x18\n" +
 	"\x16DecryptDBFilesResponse\"\x19\n" +
 	"\x17StartAutoDecryptRequest\"\x1a\n" +
-	"\x18StartAutoDecryptResponse\"\x18\n" +
+	"\x18StartAutoDecryptResponse\"\x0f\n" +
+	"\rBackupRequest\"\x10\n" +
+	"\x0eBackupResponse\"\x18\n" +
 	"\x16StopAutoDecryptRequest\"\x19\n" +
 	"\x17StopAutoDecryptResponse\"\x17\n" +
 	"\x15RefreshSessionRequest\"\x18\n" +
@@ -1685,7 +1759,7 @@ const file_proto_chatlog_proto_rawDesc = "" +
 	"\fCmdConfEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"\x11\n" +
-	"\x0fDecryptResponse2\x92\n" +
+	"\x0fDecryptResponse2\xcd\n" +
 	"\n" +
 	"\x0eManagerService\x12H\n" +
 	"\vSetLogLevel\x12\x1b.chatlog.SetLogLevelRequest\x1a\x1c.chatlog.SetLogLevelResponse\x120\n" +
@@ -1706,7 +1780,8 @@ const file_proto_chatlog_proto_rawDesc = "" +
 	"\x11CommandHTTPServer\x12!.chatlog.CommandHTTPServerRequest\x1a\".chatlog.CommandHTTPServerResponse\x12]\n" +
 	"\x12GetWeChatInstances\x12\".chatlog.GetWeChatInstancesRequest\x1a#.chatlog.GetWeChatInstancesResponse\x129\n" +
 	"\x06GetKey\x12\x16.chatlog.GetKeyRequest\x1a\x17.chatlog.GetKeyResponse\x12<\n" +
-	"\aDecrypt\x12\x17.chatlog.DecryptRequest\x1a\x18.chatlog.DecryptResponseB!Z\x1fgithub.com/sjzar/chatlog/pkg/pbb\x06proto3"
+	"\aDecrypt\x12\x17.chatlog.DecryptRequest\x1a\x18.chatlog.DecryptResponse\x129\n" +
+	"\x06Backup\x12\x16.chatlog.BackupRequest\x1a\x17.chatlog.BackupResponseB!Z\x1fgithub.com/sjzar/chatlog/pkg/pbb\x06proto3"
 
 var (
 	file_proto_chatlog_proto_rawDescOnce sync.Once
@@ -1720,7 +1795,7 @@ func file_proto_chatlog_proto_rawDescGZIP() []byte {
 	return file_proto_chatlog_proto_rawDescData
 }
 
-var file_proto_chatlog_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
+var file_proto_chatlog_proto_msgTypes = make([]protoimpl.MessageInfo, 41)
 var file_proto_chatlog_proto_goTypes = []any{
 	(*SetLogLevelRequest)(nil),         // 0: chatlog.SetLogLevelRequest
 	(*SetLogLevelResponse)(nil),        // 1: chatlog.SetLogLevelResponse
@@ -1742,33 +1817,35 @@ var file_proto_chatlog_proto_goTypes = []any{
 	(*DecryptDBFilesResponse)(nil),     // 17: chatlog.DecryptDBFilesResponse
 	(*StartAutoDecryptRequest)(nil),    // 18: chatlog.StartAutoDecryptRequest
 	(*StartAutoDecryptResponse)(nil),   // 19: chatlog.StartAutoDecryptResponse
-	(*StopAutoDecryptRequest)(nil),     // 20: chatlog.StopAutoDecryptRequest
-	(*StopAutoDecryptResponse)(nil),    // 21: chatlog.StopAutoDecryptResponse
-	(*RefreshSessionRequest)(nil),      // 22: chatlog.RefreshSessionRequest
-	(*RefreshSessionResponse)(nil),     // 23: chatlog.RefreshSessionResponse
-	(*CommandKeyRequest)(nil),          // 24: chatlog.CommandKeyRequest
-	(*CommandKeyResponse)(nil),         // 25: chatlog.CommandKeyResponse
-	(*CommandDecryptRequest)(nil),      // 26: chatlog.CommandDecryptRequest
-	(*CommandDecryptResponse)(nil),     // 27: chatlog.CommandDecryptResponse
-	(*CommandHTTPServerRequest)(nil),   // 28: chatlog.CommandHTTPServerRequest
-	(*CommandHTTPServerResponse)(nil),  // 29: chatlog.CommandHTTPServerResponse
-	(*GetWeChatInstancesRequest)(nil),  // 30: chatlog.GetWeChatInstancesRequest
-	(*GetWeChatInstancesResponse)(nil), // 31: chatlog.GetWeChatInstancesResponse
-	(*GetKeyRequest)(nil),              // 32: chatlog.GetKeyRequest
-	(*GetKeyResponse)(nil),             // 33: chatlog.GetKeyResponse
-	(*DecryptRequest)(nil),             // 34: chatlog.DecryptRequest
-	(*DecryptResponse)(nil),            // 35: chatlog.DecryptResponse
-	nil,                                // 36: chatlog.CommandDecryptRequest.CmdConfEntry
-	nil,                                // 37: chatlog.CommandHTTPServerRequest.CmdConfEntry
-	nil,                                // 38: chatlog.DecryptRequest.CmdConfEntry
+	(*BackupRequest)(nil),              // 20: chatlog.BackupRequest
+	(*BackupResponse)(nil),             // 21: chatlog.BackupResponse
+	(*StopAutoDecryptRequest)(nil),     // 22: chatlog.StopAutoDecryptRequest
+	(*StopAutoDecryptResponse)(nil),    // 23: chatlog.StopAutoDecryptResponse
+	(*RefreshSessionRequest)(nil),      // 24: chatlog.RefreshSessionRequest
+	(*RefreshSessionResponse)(nil),     // 25: chatlog.RefreshSessionResponse
+	(*CommandKeyRequest)(nil),          // 26: chatlog.CommandKeyRequest
+	(*CommandKeyResponse)(nil),         // 27: chatlog.CommandKeyResponse
+	(*CommandDecryptRequest)(nil),      // 28: chatlog.CommandDecryptRequest
+	(*CommandDecryptResponse)(nil),     // 29: chatlog.CommandDecryptResponse
+	(*CommandHTTPServerRequest)(nil),   // 30: chatlog.CommandHTTPServerRequest
+	(*CommandHTTPServerResponse)(nil),  // 31: chatlog.CommandHTTPServerResponse
+	(*GetWeChatInstancesRequest)(nil),  // 32: chatlog.GetWeChatInstancesRequest
+	(*GetWeChatInstancesResponse)(nil), // 33: chatlog.GetWeChatInstancesResponse
+	(*GetKeyRequest)(nil),              // 34: chatlog.GetKeyRequest
+	(*GetKeyResponse)(nil),             // 35: chatlog.GetKeyResponse
+	(*DecryptRequest)(nil),             // 36: chatlog.DecryptRequest
+	(*DecryptResponse)(nil),            // 37: chatlog.DecryptResponse
+	nil,                                // 38: chatlog.CommandDecryptRequest.CmdConfEntry
+	nil,                                // 39: chatlog.CommandHTTPServerRequest.CmdConfEntry
+	nil,                                // 40: chatlog.DecryptRequest.CmdConfEntry
 }
 var file_proto_chatlog_proto_depIdxs = []int32{
 	2,  // 0: chatlog.SwitchRequest.info:type_name -> chatlog.Account
-	36, // 1: chatlog.CommandDecryptRequest.cmd_conf:type_name -> chatlog.CommandDecryptRequest.CmdConfEntry
-	37, // 2: chatlog.CommandHTTPServerRequest.cmd_conf:type_name -> chatlog.CommandHTTPServerRequest.CmdConfEntry
+	38, // 1: chatlog.CommandDecryptRequest.cmd_conf:type_name -> chatlog.CommandDecryptRequest.CmdConfEntry
+	39, // 2: chatlog.CommandHTTPServerRequest.cmd_conf:type_name -> chatlog.CommandHTTPServerRequest.CmdConfEntry
 	2,  // 3: chatlog.GetWeChatInstancesResponse.accounts:type_name -> chatlog.Account
 	3,  // 4: chatlog.GetKeyResponse.data:type_name -> chatlog.KeyData
-	38, // 5: chatlog.DecryptRequest.cmd_conf:type_name -> chatlog.DecryptRequest.CmdConfEntry
+	40, // 5: chatlog.DecryptRequest.cmd_conf:type_name -> chatlog.DecryptRequest.CmdConfEntry
 	0,  // 6: chatlog.ManagerService.SetLogLevel:input_type -> chatlog.SetLogLevelRequest
 	4,  // 7: chatlog.ManagerService.Run:input_type -> chatlog.RunRequest
 	6,  // 8: chatlog.ManagerService.Switch:input_type -> chatlog.SwitchRequest
@@ -1778,33 +1855,35 @@ var file_proto_chatlog_proto_depIdxs = []int32{
 	14, // 12: chatlog.ManagerService.GetDataKey:input_type -> chatlog.GetDataKeyRequest
 	16, // 13: chatlog.ManagerService.DecryptDBFiles:input_type -> chatlog.DecryptDBFilesRequest
 	18, // 14: chatlog.ManagerService.StartAutoDecrypt:input_type -> chatlog.StartAutoDecryptRequest
-	20, // 15: chatlog.ManagerService.StopAutoDecrypt:input_type -> chatlog.StopAutoDecryptRequest
-	22, // 16: chatlog.ManagerService.RefreshSession:input_type -> chatlog.RefreshSessionRequest
-	24, // 17: chatlog.ManagerService.CommandKey:input_type -> chatlog.CommandKeyRequest
-	26, // 18: chatlog.ManagerService.CommandDecrypt:input_type -> chatlog.CommandDecryptRequest
-	28, // 19: chatlog.ManagerService.CommandHTTPServer:input_type -> chatlog.CommandHTTPServerRequest
-	30, // 20: chatlog.ManagerService.GetWeChatInstances:input_type -> chatlog.GetWeChatInstancesRequest
-	32, // 21: chatlog.ManagerService.GetKey:input_type -> chatlog.GetKeyRequest
-	34, // 22: chatlog.ManagerService.Decrypt:input_type -> chatlog.DecryptRequest
-	1,  // 23: chatlog.ManagerService.SetLogLevel:output_type -> chatlog.SetLogLevelResponse
-	5,  // 24: chatlog.ManagerService.Run:output_type -> chatlog.RunResponse
-	7,  // 25: chatlog.ManagerService.Switch:output_type -> chatlog.SwitchResponse
-	9,  // 26: chatlog.ManagerService.StartService:output_type -> chatlog.StartServiceResponse
-	11, // 27: chatlog.ManagerService.StopService:output_type -> chatlog.StopServiceResponse
-	13, // 28: chatlog.ManagerService.SetHTTPAddr:output_type -> chatlog.SetHTTPAddrResponse
-	15, // 29: chatlog.ManagerService.GetDataKey:output_type -> chatlog.GetDataKeyResponse
-	17, // 30: chatlog.ManagerService.DecryptDBFiles:output_type -> chatlog.DecryptDBFilesResponse
-	19, // 31: chatlog.ManagerService.StartAutoDecrypt:output_type -> chatlog.StartAutoDecryptResponse
-	21, // 32: chatlog.ManagerService.StopAutoDecrypt:output_type -> chatlog.StopAutoDecryptResponse
-	23, // 33: chatlog.ManagerService.RefreshSession:output_type -> chatlog.RefreshSessionResponse
-	25, // 34: chatlog.ManagerService.CommandKey:output_type -> chatlog.CommandKeyResponse
-	27, // 35: chatlog.ManagerService.CommandDecrypt:output_type -> chatlog.CommandDecryptResponse
-	29, // 36: chatlog.ManagerService.CommandHTTPServer:output_type -> chatlog.CommandHTTPServerResponse
-	31, // 37: chatlog.ManagerService.GetWeChatInstances:output_type -> chatlog.GetWeChatInstancesResponse
-	33, // 38: chatlog.ManagerService.GetKey:output_type -> chatlog.GetKeyResponse
-	35, // 39: chatlog.ManagerService.Decrypt:output_type -> chatlog.DecryptResponse
-	23, // [23:40] is the sub-list for method output_type
-	6,  // [6:23] is the sub-list for method input_type
+	22, // 15: chatlog.ManagerService.StopAutoDecrypt:input_type -> chatlog.StopAutoDecryptRequest
+	24, // 16: chatlog.ManagerService.RefreshSession:input_type -> chatlog.RefreshSessionRequest
+	26, // 17: chatlog.ManagerService.CommandKey:input_type -> chatlog.CommandKeyRequest
+	28, // 18: chatlog.ManagerService.CommandDecrypt:input_type -> chatlog.CommandDecryptRequest
+	30, // 19: chatlog.ManagerService.CommandHTTPServer:input_type -> chatlog.CommandHTTPServerRequest
+	32, // 20: chatlog.ManagerService.GetWeChatInstances:input_type -> chatlog.GetWeChatInstancesRequest
+	34, // 21: chatlog.ManagerService.GetKey:input_type -> chatlog.GetKeyRequest
+	36, // 22: chatlog.ManagerService.Decrypt:input_type -> chatlog.DecryptRequest
+	20, // 23: chatlog.ManagerService.Backup:input_type -> chatlog.BackupRequest
+	1,  // 24: chatlog.ManagerService.SetLogLevel:output_type -> chatlog.SetLogLevelResponse
+	5,  // 25: chatlog.ManagerService.Run:output_type -> chatlog.RunResponse
+	7,  // 26: chatlog.ManagerService.Switch:output_type -> chatlog.SwitchResponse
+	9,  // 27: chatlog.ManagerService.StartService:output_type -> chatlog.StartServiceResponse
+	11, // 28: chatlog.ManagerService.StopService:output_type -> chatlog.StopServiceResponse
+	13, // 29: chatlog.ManagerService.SetHTTPAddr:output_type -> chatlog.SetHTTPAddrResponse
+	15, // 30: chatlog.ManagerService.GetDataKey:output_type -> chatlog.GetDataKeyResponse
+	17, // 31: chatlog.ManagerService.DecryptDBFiles:output_type -> chatlog.DecryptDBFilesResponse
+	19, // 32: chatlog.ManagerService.StartAutoDecrypt:output_type -> chatlog.StartAutoDecryptResponse
+	23, // 33: chatlog.ManagerService.StopAutoDecrypt:output_type -> chatlog.StopAutoDecryptResponse
+	25, // 34: chatlog.ManagerService.RefreshSession:output_type -> chatlog.RefreshSessionResponse
+	27, // 35: chatlog.ManagerService.CommandKey:output_type -> chatlog.CommandKeyResponse
+	29, // 36: chatlog.ManagerService.CommandDecrypt:output_type -> chatlog.CommandDecryptResponse
+	31, // 37: chatlog.ManagerService.CommandHTTPServer:output_type -> chatlog.CommandHTTPServerResponse
+	33, // 38: chatlog.ManagerService.GetWeChatInstances:output_type -> chatlog.GetWeChatInstancesResponse
+	35, // 39: chatlog.ManagerService.GetKey:output_type -> chatlog.GetKeyResponse
+	37, // 40: chatlog.ManagerService.Decrypt:output_type -> chatlog.DecryptResponse
+	21, // 41: chatlog.ManagerService.Backup:output_type -> chatlog.BackupResponse
+	24, // [24:42] is the sub-list for method output_type
+	6,  // [6:24] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name
 	6,  // [6:6] is the sub-list for extension extendee
 	0,  // [0:6] is the sub-list for field type_name
@@ -1821,7 +1900,7 @@ func file_proto_chatlog_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_chatlog_proto_rawDesc), len(file_proto_chatlog_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   39,
+			NumMessages:   41,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

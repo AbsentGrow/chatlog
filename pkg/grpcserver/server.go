@@ -19,10 +19,17 @@ import (
 )
 
 // Server implements the gRPC ManagerService.
+var _ pb.ManagerServiceServer = (*Server)(nil)
+
 type Server struct {
 	pb.UnimplementedManagerServiceServer
 	manager chatlog.Manager
 	server  *grpc.Server
+}
+
+func (s *Server) Backup(ctx context.Context, request *pb.BackupRequest) (*pb.BackupResponse, error) {
+	//TODO implement me
+	panic("implement me")
 }
 
 // New creates a new gRPC server.
