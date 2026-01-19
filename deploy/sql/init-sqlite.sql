@@ -77,7 +77,7 @@ CREATE VIRTUAL TABLE IF NOT EXISTS wechat_message_fts USING fts5(
       content,                             -- Search Content Column
       content='wechat_message',            -- Associated Source Table
       content_rowid='id',                  -- Source Table Primary Key Mapping
-      tokenize='trigram'                   -- Use trigram tokenizer for mixed Chinese/English support
+      tokenize='unicode61'                 -- Use unicode61 tokenizer for mixed Chinese/English support
 );
 
 -- Trigger: Sync to FTS table on new message insertion
