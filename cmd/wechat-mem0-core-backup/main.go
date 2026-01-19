@@ -11,6 +11,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/sjzar/chatlog/internal/chatlog"
 	"github.com/sjzar/chatlog/internal/wechatdb"
+	"github.com/sjzar/chatlog/pkg/backup"
 
 	_ "github.com/joho/godotenv/autoload"
 )
@@ -185,234 +186,34 @@ func main() {
 	workDir := os.Getenv("WORK_DIR")
 	platform := os.Getenv("PLATFORM")
 	version, _ := strconv.Atoi(os.Getenv("VERSION"))
+
+	// Initialize WeChat Source DB
 	db, err := wechatdb.New(workDir, platform, version)
 	if err != nil {
-		log.Fatal().Err(err).Msg("failed to create db")
+		log.Fatal().Err(err).Msg("failed to create wechat db")
 		return
 	}
 
-	migration, err := NewSQLiteMigration("/Users/warjiang/Library/Application Support/wechat-mem0/wechat-mem0-chats.db", db)
+	// Backup Configuration (Example: SQLite)
+	// In a real scenario, these could come from CLI flags or ENV vars
+	backupConfig := backup.Config{
+		Driver: backup.DriverSQLite,
+		DSN:    "/Users/warjiang/Library/Application Support/wechat-mem0/wechat-mem0-chats.db", // Target DB
+	}
+
+	// Initialize Backup Service
+	svc, err := backup.NewService(backupConfig, db)
 	if err != nil {
-		log.Fatal().Err(err).Msg("failed to create migration")
+		log.Fatal().Err(err).Msg("failed to create backup service")
 		return
 	}
-	if err = migration.Export(); err != nil {
-		log.Fatal().Err(err).Msg("failed to export migration")
+
+	// Run Backup
+	if err := svc.Run(); err != nil {
+		log.Fatal().Err(err).Msg("backup process failed")
 		return
 	}
-	log.Info().Msg("migration exported")
 
-	/*
-		sqlitePath := "/Users/dingwenjiang/Library/Application Support/wechat-mem0/wechat-mem0-chats.db"
-		//sqliteDir := filepath.Dir(sqlitePath)
-		//if err := os.MkdirAll(sqliteDir, 0755); err != nil {
-		//	log.Fatal().Err(err).Msg("failed to create sqlite directory")
-		//	return
-		//}
+	log.Info().Msg("Backup completed successfully via GORM service")
 
-		sqlDB, err := sql.Open("sqlite3", sqlitePath)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to open sqlite database")
-			return
-		}
-		defer sqlDB.Close()
-
-		log.Info().Str("path", sqlitePath).Msg("sqlite database opened")
-	*/
-	//_, err = sqlDB.Exec("CREATE INDEX IF NOT EXISTS idx_message_talker ON message(talker)")
-	//if err != nil {
-	//	log.Fatal().Err(err).Msg("failed to create talker index")
-	//	return
-	//}
-	//
-	//_, err = sqlDB.Exec("CREATE INDEX IF NOT EXISTS idx_message_time ON message(time)")
-	//if err != nil {
-	//	log.Fatal().Err(err).Msg("failed to create time index")
-	//	return
-	//}
-
-	/*
-		_, err = sqlDB.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
-		if err != nil {
-			log.Warn().Err(err).Msg("failed to checkpoint WAL")
-		}
-
-		log.Info().Msg("sqlite database initialized with performance optimizations")
-	*/
-	/*
-		contacts, err := db.GetContacts("", 0, 0)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to get contacts")
-			return
-		}
-
-		ctx := context.Background()
-
-		stmt, err := pgDB.PrepareContext(ctx, `
-			INSERT INTO contact (user_name, alias, remark, nick_name, is_friend)
-			VALUES ($1, $2, $3, $4, $5)
-		`)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to prepare statement")
-			return
-		}
-		defer stmt.Close()
-
-		successCount := 0
-		failCount := 0
-		for _, contact := range contacts.Items {
-			log.Info().Interface("contact", contact).Msg("contact")
-			_, err := stmt.ExecContext(ctx, contact.UserName, contact.Alias, contact.Remark, contact.NickName, contact.IsFriend)
-			if err != nil {
-				log.Error().Err(err).Str("user_name", contact.UserName).Msg("failed to insert contact")
-				failCount++
-				continue
-			}
-			successCount++
-		}
-
-		log.Info().Ints("count", []int{successCount, failCount}).Msg("contacts saved to postgres")
-	*/
-	/*
-		rooms, err := db.GetChatRooms("", 0, 0)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to get rooms")
-			return
-		}
-		ctx := context.Background()
-
-		stmt, err := pgDB.PrepareContext(ctx, `
-				INSERT INTO chat_room (name, owner, remark, nick_name, users)
-				VALUES ($1, $2, $3, $4, $5)
-			`)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to prepare statement")
-			return
-		}
-		defer stmt.Close()
-		successCount := 0
-		failCount := 0
-		for _, room := range rooms.Items {
-			log.Info().Interface("room", room).Msg("room")
-			_, err := stmt.ExecContext(ctx, room.Name, room.Owner, room.Remark, room.NickName, room.Users)
-			if err != nil {
-				log.Error().Err(err).Str("chat_room", room.Name).Msg("failed to insert chat room")
-				failCount++
-				continue
-			}
-			successCount++
-		}
-		log.Info().Ints("count", []int{successCount, failCount}).Msg("chat rooms saved to postgres")
-	*/
-	/*
-		contacts, err := db.GetContacts("", 0, 0)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to get contacts")
-			return
-		}
-
-		insertStmt, err := sqlDB.Prepare(`
-			INSERT OR IGNORE INTO wechat_message (seq, time, talker, talker_name, is_chat_room, sender, is_self, type, sub_type, content, contents)
-			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-		`)
-		if err != nil {
-			log.Fatal().Err(err).Msg("failed to prepare insert statement")
-			return
-		}
-		defer insertStmt.Close()
-
-		totalMessages := 0
-		totalContacts := 0
-
-		for _, contact := range contacts.Items {
-			totalContacts++
-			log.Info().Interface("contact", contact).Msg("contact")
-			messages, err := db.GetMessages(time.Unix(0, 0), time.Now(), contact.UserName, "", "", 0, 0)
-			if err != nil {
-				log.Fatal().Err(err).Msg("failed to get messages")
-				return
-			}
-
-			if len(messages) == 0 {
-				continue
-			}
-
-			log.Info().Int("batch_size", len(messages)).Msg("batch importing messages")
-
-			tx, err := sqlDB.Begin()
-			if err != nil {
-				log.Fatal().Err(err).Msg("failed to begin transaction")
-				return
-			}
-
-			for _, message := range messages {
-				var contentsJSON string
-				if message.Contents != nil {
-					contentsBytes, err := json.Marshal(message.Contents)
-					if err != nil {
-						log.Error().Err(err).Msg("failed to marshal contents")
-						tx.Rollback()
-						return
-					}
-					contentsJSON = string(contentsBytes)
-				}
-
-				_, err := insertStmt.Exec(
-					message.Seq,
-					message.Time,
-					message.Talker,
-					message.TalkerName,
-					boolToInt64(message.IsChatRoom),
-					message.Sender,
-					boolToInt64(message.IsSelf),
-					message.Type,
-					message.SubType,
-					message.Content,
-					contentsJSON,
-				)
-				if err != nil {
-					log.Error().Err(err).Msg("failed to insert message")
-					tx.Rollback()
-					return
-				}
-			}
-
-			if err := tx.Commit(); err != nil {
-				log.Fatal().Err(err).Msg("failed to commit transaction")
-				return
-			}
-
-			totalMessages += len(messages)
-			log.Info().Int("count", len(messages)).Msg("messages saved to sqlite")
-
-			_, err = sqlDB.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
-			if err != nil {
-				log.Warn().Err(err).Msg("failed to checkpoint WAL")
-			}
-		}
-
-		log.Info().Ints("stats", []int{totalContacts, totalMessages}).Msg("import completed")
-	*/
-	/*
-		// db migration
-		dbFiles, err := pgmigrate.ListDBFiles(os.Getenv("DB_PATH"))
-		if err != nil {
-			log.Err(err).Msg("failed to list db files")
-			return
-		}
-
-		for _, dbFile := range dbFiles {
-			log.Info().Str("file", dbFile).Msg("loading db file")
-		}
-	*/
-
-	/*
-		// db exporter
-		ddl, err := pgmigrate.GenerateDDL(os.Getenv("DB_PATH"))
-		if err != nil {
-			log.Err(err).Msg("failed to generate ddl")
-			return
-		}
-		log.Info().Str("ddl", ddl).Msg("generated ddl")
-	*/
 }
