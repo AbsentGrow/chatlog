@@ -11,7 +11,6 @@ _聊天记录工具，帮助大家轻松使用自己的聊天数据_
 [![GitHub release](https://img.shields.io/github/release/sjzar/chatlog.svg)](https://github.com/sjzar/chatlog/releases)
 [![GitHub license](https://img.shields.io/github/license/sjzar/chatlog.svg)](https://github.com/sjzar/chatlog/blob/main/LICENSE)
 
-
 </div>
 
 ## Feature
@@ -36,7 +35,7 @@ _聊天记录工具，帮助大家轻松使用自己的聊天数据_
 4. **开启 HTTP 服务**：选择 `开启 HTTP 服务` 菜单项
 5. **访问数据**：通过 [HTTP API](#http-api) 或 [MCP 集成](#mcp-集成) 访问聊天记录
 
-> 💡 **提示**: 如果电脑端微信聊天记录不全，可以[从手机端迁移数据](#从手机迁移聊天记录)  
+> 💡 **提示**: 如果电脑端微信聊天记录不全，可以[从手机端迁移数据](#从手机迁移聊天记录)
 
 ### 常见问题快速解决
 
@@ -70,6 +69,7 @@ chatlog
 ```
 
 操作方法：
+
 - 使用 `↑` `↓` 键选择菜单项
 - 按 `Enter` 确认选择
 - 按 `Esc` 返回上级菜单
@@ -110,16 +110,19 @@ Image Key: [38636***653361]
 chatlog 提供了两个镜像源：
 
 **Docker Hub**:
+
 ```shell
 docker pull sjzar/chatlog:latest
 ```
 
 **GitHub Container Registry (ghcr)**:
+
 ```shell
 docker pull ghcr.io/sjzar/chatlog:latest
 ```
 
-> 💡 **镜像地址**: 
+> 💡 **镜像地址**:
+>
 > - Docker Hub: https://hub.docker.com/r/sjzar/chatlog
 > - GitHub Container Registry: https://ghcr.io/sjzar/chatlog
 
@@ -154,18 +157,20 @@ $ docker run -d \
 macOS 用户在获取密钥前需要临时关闭 SIP（系统完整性保护）：
 
 1. **关闭 SIP**：
+
    ```shell
    # 进入恢复模式
    # Intel Mac: 重启时按住 Command + R
    # Apple Silicon: 重启时长按电源键
-   
+
    # 在恢复模式中打开终端并执行
    csrutil disable
-   
+
    # 重启系统
    ```
 
 2. **安装必要工具**：
+
    ```shell
    # 安装 Xcode Command Line Tools
    xcode-select --install
@@ -186,6 +191,7 @@ GET /api/v1/chatlog?time=2023-01-01&talker=wxid_xxx
 ```
 
 参数说明：
+
 - `time`: 时间范围，格式为 `YYYY-MM-DD` 或 `YYYY-MM-DD~YYYY-MM-DD`
 - `talker`: 聊天对象标识（支持 wxid、群聊 ID、备注名、昵称等）
 - `limit`: 返回记录数量
@@ -231,7 +237,7 @@ GET /api/v1/chatlog?time=2023-01-01&talker=wxid_xxx
     "host": "localhost:5030",                   # 消息中的图片、文件等 URL host
     "items": [
       {
-        "url": "http://localhost:8080/webhook", # 必填，webhook 请求的URL，可配置为 n8n 等 webhook 入口 
+        "url": "http://localhost:8080/webhook", # 必填，webhook 请求的URL，可配置为 n8n 等 webhook 入口
         "talker": "wxid_123",                   # 必填，需要监控的私聊、群聊名称
         "sender": "",                           # 选填，消息发送者
         "keyword": ""                           # 选填，关键词
@@ -348,10 +354,34 @@ Chatlog 可以与多种支持 MCP 的 AI 助手集成，包括：
 
 本项目不收集任何用户数据。所有数据处理均在用户本地设备上进行。使用第三方服务时，请参阅相应服务的隐私政策。
 
+## Troubleshooting
+
+### 获取密钥时遇到 "no valid key found" 问题
+
+如果在获取数据密钥时遇到 "no valid key found" 错误，可选择“检测微信版本”，如版本过高，需降级处理
+
+**解决方案：降级微信版本**
+
+目前支持的微信版本：
+
+- Windows: < 4.0.3.36
+- macOS: < 4.0.3.80
+
+推荐的稳定版本下载：
+
+**Windows 4.0.3.36**
+
+- https://github.com/iibob/WechatWindowsVersionHistory/releases/tag/v4.0.3.36
+- https://github.com/cscnk52/wechat-windows-versions/releases/tag/v4.0.3.36
+
+**macOS 4.0.3.80**
+
+- https://github.com/zsbai/wechat-versions/releases/tag/v4.0.3.80
+
 ## Thanks
 
 - [@0xlane](https://github.com/0xlane) 的 [wechat-dump-rs](https://github.com/0xlane/wechat-dump-rs) 项目
 - [@xaoyaoo](https://github.com/xaoyaoo) 的 [PyWxDump](https://github.com/xaoyaoo/PyWxDump) 项目
 - [@git-jiadong](https://github.com/git-jiadong) 的 [go-lame](https://github.com/git-jiadong/go-lame) 和 [go-silk](https://github.com/git-jiadong/go-silk) 项目
-- [Anthropic](https://www.anthropic.com/) 的 [MCP]((https://github.com/modelcontextprotocol) ) 协议
+- [Anthropic](https://www.anthropic.com/) 的 [MCP](<(https://github.com/modelcontextprotocol)>) 协议
 - 各个 Go 开源库的贡献者们
