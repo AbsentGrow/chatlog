@@ -1,0 +1,74 @@
+services:
+  db:
+    image: ${DOCKER_REGISTRY:-docker.io}/postgres:16
+    restart: always
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: chatlog
+      POSTGRES_USER: chatlog_user
+      POSTGRES_PASSWORD: chatlog_password
+    ports:
+      - "5432:5432"
+    profiles:
+      - minimal
+      - enterprise
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d chatlog -U chatlog_user"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+
+  dict-server:
+    image: ${DOCKER_REGISTRY:-docker.io}/python:3.9-alpine
+    container_name: dict-server
+    volumes:
+      - ./dict-server:/dict:ro
+    working_dir: /dict
+    command: [ "python", "-m", "http.server", "8000" ]
+
+  opensearch:
+    image: ${DOCKER_REGISTRY:-docker.io}/opensearchproject/opensearch:3.2.0
+    container_name: opensearch
+    environment:
+      - cluster.name=opensearch-cluster
+      - node.name=opensearch-node1
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+      - plugins.security.disabled=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    volumes:
+      - opensearch:/usr/share/opensearch/data
+      - ./opensearch/config/opensearch.yml:/usr/share/opensearch/config/opensearch.yml
+      - ./opensearch/init:/usr/share/opensearch/init:ro
+      - ./plugins:/usr/share/opensearch/plugins-local:ro
+    ports:
+      - "9200:9200"
+      - "9600:9600" # Performance Analyzer
+    depends_on:
+      - dict-server
+
+  opensearch-dashboards:
+    image: ${DOCKER_REGISTRY:-docker.io}/opensearchproject/opensearch-dashboards:3.2.0
+    container_name: opensearch-dashboards
+    ports:
+      - "5601:5601"
+    environment:
+      - 'OPENSEARCH_HOSTS=["http://opensearch:9200"]'
+      - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
+    depends_on:
+      - opensearch
+
+volumes:
+  postgres:
+    name: postgres-data
+  opensearch:
+    name: opensearch-data

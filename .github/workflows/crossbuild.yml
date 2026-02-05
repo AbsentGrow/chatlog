@@ -1,0 +1,107 @@
+name: Cross Build
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  crossbuild:
+    name: Build ${{ matrix.goos }}/${{ matrix.goarch }}
+    runs-on: ${{ matrix.runs_on }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runs_on: ubuntu-latest
+            goos: linux
+            goarch: amd64
+          - runs_on: windows-latest
+            goos: windows
+            goarch: amd64
+          - runs_on: macos-latest
+            goos: darwin
+            goarch: arm64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Setup MSYS2 (Windows)
+        if: runner.os == 'Windows'
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          path-type: inherit
+          update: true
+          install: >-
+            base-devel
+            mingw-w64-x86_64-toolchain
+
+      - name: Cross build (Linux/macOS)
+        if: runner.os != 'Windows'
+        shell: bash
+        run: make crossbuild PLATFORMS="${{ matrix.goos }}/${{ matrix.goarch }}"
+        env:
+          CGO_ENABLED: "1"
+
+      - name: Cross build (Windows)
+        if: runner.os == 'Windows'
+        shell: msys2 {0}
+        run: make crossbuild PLATFORMS="${{ matrix.goos }}/${{ matrix.goarch }}"
+        env:
+          CGO_ENABLED: "1"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatlog_${{ matrix.goos }}_${{ matrix.goarch }}
+          path: |
+            bin/chatlog_${{ matrix.goos }}_${{ matrix.goarch }}*
+            bin/chatlog_${{ matrix.goos }}_${{ matrix.goarch }}*.exe
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: crossbuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-builds
+
+      - name: Collect all release assets
+        run: |
+          mkdir -p release-assets
+          find all-builds -type f \( -name "chatlog_*" ! -name "*.zip" ! -name "*.tar.gz" \) -exec mv {} release-assets/ \;
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release-assets/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,18 @@
+# opensearch/config/opensearch.yml
+
+# 集群和节点设置
+cluster.name: opensearch-cluster
+node.name: opensearch-node1
+
+# 网络设置
+network.host: 0.0.0.0
+http.port: 9200
+
+# 发现设置（单节点模式）
+discovery.type: single-node
+
+# 安全设置（开发环境禁用安全插件）
+plugins.security.disabled: true
+
+# 内存锁定（建议在生产环境启用，配合 ulimits）
+bootstrap.memory_lock: true
