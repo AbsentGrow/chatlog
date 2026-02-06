@@ -13,7 +13,13 @@ _聊天记录工具，帮助大家轻松使用自己的聊天数据_
 
 </div>
 
-> ⚠️ **重要提示**: 由于不可抗力（你懂的），请勿 star，保持低调，欢迎 PR，其他问题讨论 QQ 群：740412645
+> ⚠️ **重要提示**: 由于不可抗力（你懂的），请勿 star，保持低调，欢迎 PR
+>
+> 其他问题讨论 QQ 群：740412645
+>
+> <div align="center">
+> <img src="https://github.com/AbsentGrow/chatlog/tree/main/docs/images/qq-group-qrcode.png" width="300" alt="QQ群二维码">
+> </div>
 
 ## Feature
 
@@ -59,7 +65,7 @@ go install github.com/sjzar/chatlog@latest
 
 ### 下载预编译版本
 
-访问 [Releases](https://github.com/sjzar/chatlog/releases) 页面下载适合您系统的预编译版本。
+见群文件
 
 ## 使用指南
 
